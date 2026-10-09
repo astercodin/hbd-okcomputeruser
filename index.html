@@ -1,254 +1,151 @@
-<!DOCTYPE html><html lang="en" style=""><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_standard" name="shell-type"><title>OK COMPUTER // JAEHO 10.12</title><link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400&amp;family=JetBrains+Mono:wght@400;500;700;800&amp;family=Space+Grotesk:wght@500;600;700;800&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}
-/* Intense Glitch & Deconstructivism Styles */
-@keyframes rgbSplit {
-  0% { transform: translate(0); text-shadow: -1.5px 0 rgba(255,0,80,0.7), 1.5px 0 rgba(0,240,255,0.7); }
-  20% { transform: translate(-2px, 1px); text-shadow: 2px -1px rgba(255,0,80,0.8), -2px 1px rgba(0,240,255,0.8); }
-  40% { transform: translate(1px, -1px); text-shadow: -2px 1px rgba(255,0,80,0.8), 1.5px -1px rgba(0,240,255,0.8); }
-  60% { transform: translate(-1px, 0.5px); text-shadow: 1.5px 0.5px rgba(255,0,80,0.7), -1.5px -0.5px rgba(0,240,255,0.7); }
-  80% { transform: translate(1px, -0.5px); text-shadow: -1px -1px rgba(255,0,80,0.7), 2px 1px rgba(0,240,255,0.7); }
-  100% { transform: translate(0); text-shadow: -1.5px 0 rgba(255,0,80,0.7), 1.5px 0 rgba(0,240,255,0.7); }
-}
-@keyframes chromaticHover {
-  0% { text-shadow: -1px 0 #ff0055, 1px 0 #00e5ff; }
-  50% { text-shadow: 2px -1px #ff0055, -2px 1px #00e5ff; }
-  100% { text-shadow: -1px 0 #ff0055, 1px 0 #00e5ff; }
-}
-@keyframes sliceGlitch {
-  0% { clip-path: inset(10% 0 85% 0); transform: translateX(-4px); }
-  25% { clip-path: inset(60% 0 15% 0); transform: translateX(6px); }
-  50% { clip-path: inset(30% 0 45% 0); transform: translateX(-3px); }
-  75% { clip-path: inset(80% 0 5% 0); transform: translateX(4px); }
-  100% { clip-path: inset(15% 0 70% 0); transform: translateX(-2px); }
-}
-@keyframes radarSweep {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}
-@keyframes pulseRing {
-  0% { transform: scale(0.9); opacity: 0.9; }
-  70% { transform: scale(2.2); opacity: 0; }
-  100% { transform: scale(2.2); opacity: 0; }
-}
-@keyframes telemetryJitter {
-  0%, 100% { transform: translateY(0); }
-  92% { transform: translateY(0); }
-  93% { transform: translateY(-1px) skewX(0.5deg); }
-  94% { transform: translateY(1px); }
-  95% { transform: translateY(0); }
-}
-.glitch-text-hover:hover {
-  animation: chromaticHover 0.22s infinite alternate;
-}
-.glitch-active-anim {
-  animation: rgbSplit 0.18s infinite;
-}
-.telemetry-jitter {
-  animation: telemetryJitter 4s infinite;
-}
-.crt-scanlines {
-  background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.45) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.05), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.05));
-  background-size: 100% 3px, 6px 100%;
-}
-.shadow-brutal {
-  box-shadow: 14px 16px 0px rgba(0, 0, 0, 0.95), 0 25px 50px -12px rgba(19, 27, 46, 0.35);
-}
-.shadow-brutal-sm {
-  box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.9);
-}
-.shadow-brutal-blue {
-  box-shadow: 4px 4px 0px #006398;
-}
-.tape-strip {
-  background: rgba(225, 226, 228, 0.88);
-  backdrop-filter: blur(2px);
-  border-left: 2px dashed rgba(69, 70, 77, 0.4);
-  border-right: 2px dashed rgba(69, 70, 77, 0.4);
-}
-.blueprint-grid {
-  background-size: 28px 28px;
-  background-image: 
-    linear-gradient(to right, rgba(0, 99, 152, 0.08) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(0, 99, 152, 0.08) 1px, transparent 1px);
-}
-.map-radar-line {
-  transform-origin: 50% 50%;
-  animation: radarSweep 6s linear infinite;
-}
-</style><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"on-tertiary-fixed":"#001e2c","surface-container-lowest":"#ffffff","secondary-fixed-dim":"#93ccff","tertiary-container":"#001e2c","on-tertiary-container":"#008ebf","on-surface-variant":"#45464d","primary":"#000000","surface-dim":"#d9dadc","error-container":"#ffdad6","secondary":"#006398","on-primary-fixed-variant":"#3f465c","primary-fixed":"#dae2fd","tertiary":"#000000","on-background":"#191c1e","inverse-on-surface":"#f0f1f3","on-surface":"#191c1e","tertiary-fixed":"#c4e7ff","primary-container":"#131b2e","on-error":"#ffffff","error":"#ba1a1a","secondary-fixed":"#cce5ff","inverse-surface":"#2e3132","surface-container-highest":"#e1e2e4","on-secondary-fixed":"#001d31","outline":"#76777d","outline-variant":"#c6c6cd","on-tertiary":"#ffffff","surface-variant":"#e1e2e4","background":"#f8f9fb","on-primary":"#ffffff","on-primary-container":"#7c839b","surface":"#f8f9fb","on-error-container":"#93000a","on-secondary-fixed-variant":"#004b73","primary-fixed-dim":"#bec6e0","surface-container-high":"#e7e8ea","on-secondary":"#ffffff","on-tertiary-fixed-variant":"#004c69","tertiary-fixed-dim":"#7bd0ff","on-secondary-container":"#00476e","surface-container-low":"#f3f4f6","surface-tint":"#565e74","surface-container":"#edeef0","surface-bright":"#f8f9fb","inverse-primary":"#bec6e0","secondary-container":"#5bb8fe"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"space-sm":"0.5rem","space-md":"1rem","margin":"1rem","space-xl":"2.5rem","space-lg":"1.5rem","margin-desktop":"2.5rem","gutter":"1rem","space-xs":"0.25rem","gutter-desktop":"1.5rem"},"fontFamily":{"body-md":["Courier Prime"],"label-md":["JetBrains Mono"],"label-lg":["JetBrains Mono"],"label-sm":["JetBrains Mono"],"headline-xl-mobile":["Space Grotesk"],"headline-sm":["Space Grotesk"],"body-sm":["Courier Prime"],"headline-lg-mobile":["Space Grotesk"],"headline-md":["Space Grotesk"],"body-lg":["Courier Prime"],"headline-xl":["Space Grotesk"],"headline-lg":["Space Grotesk"]},"fontSize":{"body-md":["14px",{"lineHeight":"20px","letterSpacing":"0em","fontWeight":"400"}],"label-md":["11px",{"lineHeight":"14px","letterSpacing":"0.06em","fontWeight":"500"}],"label-lg":["13px",{"lineHeight":"16px","letterSpacing":"0.04em","fontWeight":"500"}],"label-sm":["9px",{"lineHeight":"12px","letterSpacing":"0.08em","fontWeight":"400"}],"headline-xl-mobile":["32px",{"lineHeight":"36px","letterSpacing":"-0.02em","fontWeight":"700"}],"headline-sm":["18px",{"lineHeight":"22px","letterSpacing":"0em","fontWeight":"500"}],"body-sm":["12px",{"lineHeight":"16px","letterSpacing":"0.01em","fontWeight":"400"}],"headline-lg-mobile":["26px",{"lineHeight":"30px","letterSpacing":"-0.01em","fontWeight":"600"}],"headline-md":["24px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"600"}],"body-lg":["16px",{"lineHeight":"24px","letterSpacing":"0em","fontWeight":"400"}],"headline-xl":["48px",{"lineHeight":"52px","letterSpacing":"-0.03em","fontWeight":"700"}],"headline-lg":["36px",{"lineHeight":"40px","letterSpacing":"-0.02em","fontWeight":"600"}]}}}</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased selection:bg-primary selection:text-on-primary"><header class="fixed top-0 left-0 w-full z-50 bg-surface/95 backdrop-blur-md shadow-[0_1px_8px_rgba(0,0,0,0.04)] border-b border-on-surface/15"><div class="h-16 max-w-[1280px] mx-auto px-margin lg:px-margin-desktop flex items-center justify-between"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs font-label-md text-label-md uppercase tracking-wider text-on-surface"><span class="text-secondary font-extrabold transform -rotate-6 inline-block">+</span><span class="tracking-widest font-extrabold -skew-x-6">NODE 10.12</span><span class="text-outline font-normal hidden sm:inline">//</span><span class="text-on-surface-variant font-mono text-[10px] hidden sm:inline tracking-tighter">[LAT 51.4545 N // 0.009°E]</span></div><div class="hidden md:inline-block px-space-xs py-0.5 bg-primary text-on-primary font-label-sm text-label-sm tracking-widest -rotate-1 border border-outline shadow-sm">TICKET.REF: OKC-JH1012</div></div><nav class="flex items-center gap-1 sm:gap-space-xs font-label-md text-label-md"><button class="px-2.5 sm:px-space-sm py-1 uppercase transition-all bg-primary text-on-primary font-bold shadow-brutal-sm -rotate-1 cursor-pointer flex items-center gap-1" id="navTabAudio" type="button"><span class="text-secondary-container text-xs hidden sm:inline">01</span><span class="">[01 // AUDIO TERMINAL]</span></button><button class="px-2.5 sm:px-space-sm py-1 uppercase text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all border border-transparent hover:border-outline rotate-1 cursor-pointer flex items-center gap-1" id="navTabMap" type="button"><span class="text-secondary text-xs hidden sm:inline">02</span><span class="">[02 // MAP OF THE SOUL]</span></button><a class="px-2 sm:px-space-sm py-1 uppercase text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors border border-transparent hover:border-outline hidden sm:flex items-center gap-1" data-path="birthday-transmission" href="birthday.html"><span class="text-secondary text-xs">03</span><span class="">[03 // BIRTHDAY PORTAL]</span></a></nav><div class="flex items-center gap-space-sm"><button class="px-space-sm py-1 bg-surface-container-low hover:bg-surface-container text-on-surface font-label-sm text-label-sm uppercase transition-all hidden sm:flex items-center gap-space-xs border border-on-surface/20 hover:border-on-surface glitch-text-hover" id="headerGlitchToggle" type="button"><span class="font-bold">CRT / GLITCH</span><span class="text-secondary animate-ping">●</span></button><div class="w-8 h-8 rounded-none bg-primary flex items-center justify-center border-2 border-surface shadow-brutal-sm"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-16 bg-surface min-h-[calc(100vh-80px)] relative overflow-hidden"><div class="flex flex-col w-full relative">
-<!-- Background Deconstruction Typography Overlay -->
-<div aria-hidden="true" class="absolute inset-0 pointer-events-none select-none overflow-hidden opacity-5 z-0 flex flex-col justify-between">
-<div class="text-[120px] font-headline-xl font-extrabold uppercase leading-none tracking-tighter -rotate-3 text-primary translate-x-10 translate-y-4">OK COMPUTER</div>
-<div class="text-[140px] font-label-md font-bold uppercase leading-none tracking-widest rotate-6 text-right -translate-x-12">10.12 // JAEHO</div>
-<div class="text-[100px] font-headline-xl font-extrabold uppercase leading-none tracking-tight -rotate-1 translate-y-8">NO SURPRISES PLEASE</div>
-</div>
-<!-- TOP GLOBAL TELEMETRY / TAB STATUS RIBBON -->
-<div class="max-w-[1280px] w-full mx-auto px-margin lg:px-margin-desktop pt-space-lg z-10">
-<div class="bg-surface-container-lowest p-space-md shadow-sm border border-on-surface/20 flex flex-col md:flex-row items-start md:items-center justify-between gap-space-sm relative overflow-hidden telemetry-jitter">
-<div class="absolute -top-3 right-20 px-3 py-0.5 tape-strip text-[8px] font-mono text-outline uppercase tracking-widest rotate-2 pointer-events-none border border-outline/30">CALIBRATION-SEAL // ARCHIVE 1997</div>
+<!DOCTYPE html><html lang="en" style=""><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_standard" name="shell-type"><title>OK COMPUTER // JAEHO 10.12</title><link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400&amp;family=JetBrains+Mono:wght@400;500;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"on-tertiary-fixed":"#001e2c","surface-container-lowest":"#ffffff","secondary-fixed-dim":"#93ccff","tertiary-container":"#001e2c","on-tertiary-container":"#008ebf","on-surface-variant":"#45464d","primary":"#000000","surface-dim":"#d9dadc","error-container":"#ffdad6","secondary":"#006398","on-primary-fixed-variant":"#3f465c","primary-fixed":"#dae2fd","tertiary":"#000000","on-background":"#191c1e","inverse-on-surface":"#f0f1f3","on-surface":"#191c1e","tertiary-fixed":"#c4e7ff","primary-container":"#131b2e","on-error":"#ffffff","error":"#ba1a1a","secondary-fixed":"#cce5ff","inverse-surface":"#2e3132","surface-container-highest":"#e1e2e4","on-secondary-fixed":"#001d31","outline":"#76777d","outline-variant":"#c6c6cd","on-tertiary":"#ffffff","surface-variant":"#e1e2e4","background":"#f8f9fb","on-primary":"#ffffff","on-primary-container":"#7c839b","surface":"#f8f9fb","on-error-container":"#93000a","on-secondary-fixed-variant":"#004b73","primary-fixed-dim":"#bec6e0","surface-container-high":"#e7e8ea","on-secondary":"#ffffff","on-tertiary-fixed-variant":"#004c69","tertiary-fixed-dim":"#7bd0ff","on-secondary-container":"#00476e","surface-container-low":"#f3f4f6","surface-tint":"#565e74","surface-container":"#edeef0","surface-bright":"#f8f9fb","inverse-primary":"#bec6e0","secondary-container":"#5bb8fe"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"space-sm":"0.5rem","space-md":"1rem","margin":"1rem","space-xl":"2.5rem","space-lg":"1.5rem","margin-desktop":"2.5rem","gutter":"1rem","space-xs":"0.25rem","gutter-desktop":"1.5rem"},"fontFamily":{"body-md":["Courier Prime"],"label-md":["JetBrains Mono"],"label-lg":["JetBrains Mono"],"label-sm":["JetBrains Mono"],"headline-xl-mobile":["Space Grotesk"],"headline-sm":["Space Grotesk"],"body-sm":["Courier Prime"],"headline-lg-mobile":["Space Grotesk"],"headline-md":["Space Grotesk"],"body-lg":["Courier Prime"],"headline-xl":["Space Grotesk"],"headline-lg":["Space Grotesk"]},"fontSize":{"body-md":["14px",{"lineHeight":"20px","letterSpacing":"0em","fontWeight":"400"}],"label-md":["11px",{"lineHeight":"14px","letterSpacing":"0.06em","fontWeight":"500"}],"label-lg":["13px",{"lineHeight":"16px","letterSpacing":"0.04em","fontWeight":"500"}],"label-sm":["9px",{"lineHeight":"12px","letterSpacing":"0.08em","fontWeight":"400"}],"headline-xl-mobile":["32px",{"lineHeight":"36px","letterSpacing":"-0.02em","fontWeight":"700"}],"headline-sm":["18px",{"lineHeight":"22px","letterSpacing":"0em","fontWeight":"500"}],"body-sm":["12px",{"lineHeight":"16px","letterSpacing":"0.01em","fontWeight":"400"}],"headline-lg-mobile":["26px",{"lineHeight":"30px","letterSpacing":"-0.01em","fontWeight":"600"}],"headline-md":["24px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"600"}],"body-lg":["16px",{"lineHeight":"24px","letterSpacing":"0em","fontWeight":"400"}],"headline-xl":["48px",{"lineHeight":"52px","letterSpacing":"-0.03em","fontWeight":"700"}],"headline-lg":["36px",{"lineHeight":"40px","letterSpacing":"-0.02em","fontWeight":"600"}]}}}</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased selection:bg-primary selection:text-on-primary"><header class="fixed top-0 left-0 w-full z-50 bg-surface/95 backdrop-blur-md shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 max-w-[1280px] mx-auto px-margin lg:px-margin-desktop flex items-center justify-between"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs font-label-md text-label-md uppercase tracking-wider text-on-surface"><span class="text-secondary font-bold">+</span><span class="">NODE 10.12</span><span class="text-outline font-normal hidden sm:inline">//</span><span class="text-on-surface-variant hidden sm:inline">LAT 51.4545 N</span></div><div class="hidden md:inline-block px-space-xs py-0.5 bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm">TICKET.REF: OKC-JH1012</div></div><nav class="flex items-center gap-space-xs" data-active-classes="bg-primary text-on-primary font-bold"><a aria-current="page" class="px-space-sm py-1 uppercase transition-colors bg-primary text-on-primary font-bold" data-path="system-01-audio-player" href="#">[01 // AUDIO TERMINAL]</a><a class="px-space-sm py-1 font-label-md text-label-md uppercase text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="birthday-transmission" href="index2.html">[02 // BIRTHDAY TRANSMISSION]</a></nav><div class="flex items-center gap-space-sm"><button class="px-space-sm py-1 bg-surface-container-low hover:bg-surface-container text-on-surface font-label-sm text-label-sm uppercase transition-colors hidden sm:flex items-center gap-space-xs" type="button"><span class="">CRT / GLITCH</span><span class="text-secondary">●</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-16 bg-surface min-h-[calc(100vh-80px)]"><div class="flex flex-col w-full">
+<div class="max-w-[1280px] w-full mx-auto px-margin lg:px-margin-desktop py-space-lg flex flex-col gap-space-lg">
+<!-- Top Telemetry Ribbon & System Header -->
+<div class="bg-surface-container-lowest p-space-md shadow-md flex flex-col md:flex-row items-start md:items-center justify-between gap-space-sm relative overflow-hidden">
 <div class="flex items-center gap-space-md flex-wrap">
-<span class="px-space-sm py-1 bg-surface-container text-on-surface font-label-sm text-label-sm uppercase tracking-widest font-black -rotate-2 border border-secondary/40 shadow-sm" id="viewModeBadge">SYSTEM // 01 AUDIO</span>
+<span class="px-space-xs py-0.5 bg-primary text-on-primary font-label-sm text-label-sm uppercase tracking-wider font-bold">SYSTEM // 01</span>
 <div class="flex items-center gap-space-xs font-label-md text-label-md uppercase text-on-surface">
-<span class="text-secondary font-black animate-pulse">● LIVE</span>
-<span class="font-headline-sm font-extrabold tracking-tight skew-x-3 text-base" id="viewModeHeading">OK COMPUTER : AUDIO TERMINAL ENGINE</span>
+<span class="text-secondary font-bold">● REC</span>
+<span class="">OK COMPUTER : AUDIO TERMINAL ENGINE</span>
 <span class="text-outline hidden sm:inline">//</span>
-<span class="text-secondary font-mono hidden sm:inline bg-surface-container-high px-1 text-[10px] font-bold" id="viewModeFreq">[FREQ: 101.200 MHz]</span>
+<span class="text-secondary font-mono hidden sm:inline">[FREQ: 101.200 MHz]</span>
 </div>
 </div>
-<div class="flex items-center gap-space-md text-on-surface-variant font-label-sm text-label-sm flex-wrap">
-<span class="text-outline uppercase text-[10px] font-mono">DESTINATION:</span>
-<span class="bg-secondary/30 text-on-surface px-space-sm py-0.5 font-bold uppercase tracking-wider font-mono transform rotate-1 border border-secondary/40 shadow-sm glitch-text-hover">JAEHO // 10.12 BIRTHDAY STREAM</span>
-<span class="inline-block w-2.5 h-2.5 bg-secondary-container border border-outline animate-ping"></span>
+<div class="flex items-center gap-space-md text-on-surface-variant font-label-sm text-label-sm">
+<span class="text-outline uppercase">DESTINATION:</span>
+<span class="bg-surface-container-high px-space-xs py-0.5 text-on-surface font-bold uppercase">JAEHO // 10.12 BIRTHDAY STREAM</span>
+<span class="inline-block w-2 h-2 rounded-full bg-secondary-container animate-pulse"></span>
 </div>
 </div>
-</div>
-<!-- ========================================== -->
-<!-- VIEW CONTAINER 1: AUDIO TERMINAL (DEFAULT) -->
-<!-- ========================================== -->
-<div class="max-w-[1280px] w-full mx-auto px-margin lg:px-margin-desktop py-space-lg flex flex-col gap-space-lg relative z-10 transition-opacity duration-300" id="audioTerminalSection">
 <!-- Main Asymmetric Grid: Retro Terminal Monitor vs Physical Audio Console Card -->
 <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-desktop items-start">
 <!-- Left Column: CRT Terminal Monitor Unit & Blueprint Readout (7 Cols) -->
 <div class="lg:col-span-7 flex flex-col gap-space-lg">
-<!-- CRT Monitor Rig Frame with Brutalist Heavy Shadow & Layered Offsets -->
-<div class="bg-surface-container-high p-space-md shadow-sm border border-on-surface/20 flex flex-col gap-space-md relative group">
-<div class="absolute -top-3.5 -left-2 z-20 px-2 py-0.5 bg-surface-container-lowest text-secondary font-label-sm text-[9px] font-bold uppercase tracking-widest shadow-sm -rotate-3 border border-secondary/40">
-  SEC_DEPT // NO. 1012-JH
-</div>
-<div class="absolute -bottom-3 -right-2 z-20 px-2 py-0.5 bg-surface-container-lowest text-on-surface font-label-sm text-[9px] font-mono uppercase tracking-wider shadow-sm rotate-2 border border-outline-variant">
-  TAPE OFFSET: +0.042ms
-</div>
-<div class="flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant pb-space-xs border-b border-outline-variant/60">
+<!-- CRT Monitor Rig Frame -->
+<div class="bg-surface-container-high p-space-md shadow-xl flex flex-col gap-space-md relative">
+<!-- Terminal Upper Bezel Telemetry -->
+<div class="flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant pb-space-xs">
 <div class="flex items-center gap-space-xs">
-<span class="material-symbols-outlined text-[15px] text-secondary font-bold">terminal</span>
-<span class="font-extrabold text-on-surface tracking-wider -skew-x-3">CRT.DISP.NODE_04</span>
-<span class="text-[10px] font-mono text-outline">// 4:3 CALIBRATED MATRIX</span>
+<span class="material-symbols-outlined text-[14px] text-secondary">terminal</span>
+<span class="font-bold text-on-surface">CRT.DISP.NODE_04</span>
+<span class="">// 4:3 CALIBRATED MATRIX</span>
 </div>
 <div class="flex items-center gap-space-sm">
-<span class="text-on-surface font-mono font-bold text-[10px] bg-surface-container px-1">SPEC: 10.12-OKC</span>
-<span class="bg-surface-container-lowest text-secondary px-space-xs py-0.5 text-[9px] uppercase font-bold border border-secondary/40 tracking-widest">60Hz SYNC</span>
+<span class="text-outline font-mono">SPEC: 10.12-OKC</span>
+<span class="bg-secondary text-on-secondary px-space-xs py-0.2 text-[9px] uppercase font-bold">60Hz SYNC</span>
 </div>
 </div>
-<div class="relative bg-primary overflow-hidden border border-on-surface/20 shadow-inner">
-<div class="absolute top-2 right-2 z-30 px-2 py-0.5 tape-strip text-[8px] font-mono text-on-surface font-bold uppercase -rotate-6 border border-outline-variant pointer-events-none">XEROX // FLAC-1997</div>
-<div class="absolute bottom-2 left-2 z-30 px-2 py-0.2 bg-surface-container-lowest/90 text-secondary text-[8px] font-mono uppercase border border-secondary/40 pointer-events-none">[X: 512 Y: 384 Z: 10.12]</div>
-<img alt="Abstract conceptual art piece for Radiohead OK Computer audio terminal, minimalist white paper and deep indigo blue data telemetry, fragmented acoustic waveform visual, cryptic technical diagrams, xerox texture" class="w-full h-80 sm:h-96 object-cover opacity-85 mix-blend-luminosity filter contrast-125 transition-all duration-300 relative z-10" id="crtMonitorPhoto" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD-mfncqvO9mqbRd7k5ETLYrtScP6zzC0pApRgQhVN3xPL7MlRllO5OXvFsVX-V2mimRUA-kU69Qbw09TcVXEB084CNb7vWi8Mw7EaEir6Y9cJfzoJGolTEH1dNsRte5Pu_g-J7JEH06V4rLKqXBjxoFWq0HiN81Xo31vSjNILgGXZmof3pagzeXeecyXIZ2f2r2CeymwuR5VyUNvQbF5ZjNrXaL79rCO4ypAjejLA">
-<div class="absolute inset-0 pointer-events-none opacity-0 mix-blend-screen transition-opacity duration-200 z-15" id="rgbSplitLayer">
-<div class="w-full h-full bg-cover bg-center filter invert contrast-200 opacity-40 translate-x-1" style="background-image: inherit;"></div>
-</div>
-<div class="absolute inset-0 pointer-events-none opacity-30 crt-scanlines z-20" id="glitchOverlay"></div>
-<div class="absolute inset-0 p-space-md flex flex-col justify-between pointer-events-none z-30">
+<!-- The Screen Frame (Image & Oscilloscope Overlay Container) -->
+<div class="relative bg-primary overflow-hidden shadow-inner group">
+<!-- Vintage Monitor Photo Placeholder with requested DataStore image -->
+<img alt="Abstract conceptual art piece for Radiohead OK Computer audio terminal, minimalist white paper and deep indigo blue data telemetry, fragmented acoustic waveform visual, cryptic technical diagrams, xerox texture" class="w-full h-80 sm:h-96 object-cover opacity-80 mix-blend-luminosity filter contrast-125 transition-opacity duration-500" id="crtMonitorPhoto" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD-mfncqvO9mqbRd7k5ETLYrtScP6zzC0pApRgQhVN3xPL7MlRllO5OXvFsVX-V2mimRUA-kU69Qbw09TcVXEB084CNb7vWi8Mw7EaEir6Y9cJfzoJGolTEH1dNsRte5Pu_g-J7JEH06V4rLKqXBjxoFWq0HiN81Xo31vSjNILgGXZmof3pagzeXeecyXIZ2f2r2CeymwuR5VyUNvQbF5ZjNrXaL79rCO4ypAjejLA">
+<!-- Dynamic Glitch Layer -->
+<div class="absolute inset-0 pointer-events-none opacity-20 bg-gradient-to-b from-transparent via-secondary/15 to-transparent bg-[length:100%_4px]" id="glitchOverlay"></div>
+<!-- Vector CRT Screen Interactive HUD Overlay -->
+<div class="absolute inset-0 p-space-md flex flex-col justify-between pointer-events-none">
+<!-- Upper Terminal readout -->
 <div class="flex items-start justify-between font-label-sm text-label-sm text-secondary-fixed">
-<div class="bg-surface-container-lowest/95 p-space-xs backdrop-blur-sm border-l-2 border-secondary shadow-sm -rotate-1 border border-outline-variant/60">
-<div class="text-[10px] text-secondary font-black tracking-wider uppercase glitch-text-hover">&gt; SESSION // ACTIVE // JAEHO_KID_A // 10.12</div>
-<div class="text-[9px] text-on-surface-variant font-mono tracking-widest uppercase opacity-90">STREAM: STEREO_AUDIO_FEED [LIVE_OKC]</div>
+<div class="bg-primary/85 p-space-xs backdrop-blur-sm shadow-sm">
+<div class="text-[10px] text-secondary-fixed-dim font-bold tracking-wider uppercase">&gt; SESSION // ACTIVE // JAEHO_KID_A // 10.12</div>
+<div class="text-[9px] text-surface-container-lowest font-mono tracking-widest uppercase">STREAM: STEREO_AUDIO_FEED [LIVE_OKC]</div>
 </div>
-<div class="bg-surface-container-lowest/95 px-space-sm py-1 text-right font-mono text-[9px] text-on-surface border border-outline-variant/60 border-r-2 border-secondary rotate-1 shadow-sm">
-<div class="tracking-widest text-outline">CPU: 94.2%</div>
-<div class="text-secondary font-bold tracking-wider" id="statusBlink">BUFFER: READY</div>
+<div class="bg-primary/85 px-space-xs py-1 text-right font-mono text-[9px] text-secondary-fixed">
+<div class="">CPU: 94.2%</div>
+<div class="text-secondary-fixed-dim font-bold" id="statusBlink">BUFFER: READY</div>
 </div>
 </div>
-<div class="w-full h-32 flex items-center justify-center my-auto pointer-events-auto relative">
-<div class="absolute top-1 left-2 font-mono text-[8px] text-secondary opacity-70 pointer-events-none">Δ 10.12 kHz</div>
-<div class="absolute bottom-1 right-2 font-mono text-[8px] text-secondary opacity-70 pointer-events-none">PHASE: 180°</div>
-<canvas class="w-full h-full opacity-95" height="130" id="oscilloscopeCanvas" width="560"></canvas>
+<!-- Center Oscilloscope Animated Waveform Canvas -->
+<div class="w-full h-32 flex items-center justify-center my-auto pointer-events-auto">
+<canvas class="w-full h-full opacity-90" height="130" id="oscilloscopeCanvas" width="560"></canvas>
 </div>
-<div class="bg-surface-container-lowest/95 p-space-xs backdrop-blur-sm text-on-surface font-label-sm text-label-sm flex flex-col gap-0.5 border-t border-outline-variant/60 shadow-sm">
+<!-- Lower CRT Command Line Output -->
+<div class="bg-primary/90 p-space-xs backdrop-blur-sm text-secondary-fixed-dim font-label-sm text-label-sm flex flex-col gap-0.5">
 <div class="flex items-center justify-between text-[10px]">
-<span class="text-on-surface font-black tracking-wide -skew-x-3" id="nowPlayingCrtTag">&gt; PLAYING: [TRK_11] LUCKY // JAEHO CUT</span>
-<span class="font-mono text-secondary font-bold bg-secondary-fixed/30 px-1 border border-secondary/40" id="crtTimeCode">00:02 / 04:19</span>
+<span class="text-surface-container-lowest font-bold" id="nowPlayingCrtTag">&gt; PLAYING: [TRK_06] LUCKY // JAEHO CUT</span>
+<span class="font-mono text-secondary-fixed" id="crtTimeCode">00:02 / 04:19</span>
 </div>
-<div class="text-[9px] text-on-surface-variant font-mono truncate tracking-tight">
-  $ ping host jaeho.station.local -c 1012 --payload "HAPPY BIRTHDAY JAEHO // OK COMPUTER TEL-49"
+<div class="text-[9px] text-outline-variant font-mono truncate">
+                  $ ping host jaeho.station.local -c 1012 --payload "HAPPY BIRTHDAY JAEHO // OK COMPUTER TEL-49"
+                </div>
 </div>
 </div>
 </div>
-</div>
-<div class="flex items-center justify-between pt-space-xs flex-wrap gap-space-sm">
+<!-- Bottom Bezel Hardware Controls Mockup -->
+<div class="flex items-center justify-between pt-space-xs">
 <div class="flex items-center gap-space-sm">
-<button class="px-space-sm py-1.5 bg-surface-container-lowest hover:bg-surface-container text-on-surface font-label-sm text-label-sm uppercase flex items-center gap-space-xs border border-on-surface/20 shadow-sm transition-all active:translate-x-0.5 active:translate-y-0.5 cursor-pointer" id="toggleGlitchBtn" type="button">
-<span class="material-symbols-outlined text-[14px] text-secondary font-bold">tune</span>
-<span class="tracking-wider">CRT GLITCH FX: <b class="text-secondary font-black" id="glitchStatusText">NORM</b></span>
+<button class="px-space-sm py-1 bg-surface-container-lowest hover:bg-surface text-on-surface font-label-sm text-label-sm uppercase flex items-center gap-space-xs shadow-sm transition-transform active:scale-95" id="toggleGlitchBtn" type="button">
+<span class="material-symbols-outlined text-[13px] text-secondary">tune</span>
+<span class="">CRT GLITCH FX: <b class="text-secondary" id="glitchStatusText">NORM</b></span>
 </button>
-<button class="px-space-sm py-1.5 bg-surface-container-lowest hover:bg-surface-container text-on-surface font-label-sm text-label-sm uppercase flex items-center gap-space-xs border border-on-surface/20 shadow-sm transition-all active:translate-x-0.5 active:translate-y-0.5 cursor-pointer" id="toggleTapeBtn" type="button">
-<span class="material-symbols-outlined text-[14px] text-secondary font-bold">radio</span>
-<span class="tracking-wider">LO-FI TAPE SAT: <b class="text-outline font-black" id="tapeStatusText">OFF</b></span>
+<button class="px-space-sm py-1 bg-surface-container-lowest hover:bg-surface text-on-surface font-label-sm text-label-sm uppercase flex items-center gap-space-xs shadow-sm transition-transform active:scale-95" id="toggleTapeBtn" type="button">
+<span class="material-symbols-outlined text-[13px] text-secondary">radio</span>
+<span class="">LO-FI TAPE SAT: <b class="text-outline" id="tapeStatusText">OFF</b></span>
 </button>
 </div>
-<div class="flex items-center gap-2 font-label-sm text-[9px] text-outline font-mono bg-surface-container p-1 border border-outline-variant">
-<span class="tracking-wider">CONTRAST // BIAS</span>
-<div class="w-2.5 h-2.5 bg-secondary border border-outline animate-pulse"></div>
+<div class="flex items-center gap-1 font-label-sm text-[9px] text-outline font-mono">
+<span class="">CONTRAST</span>
+<div class="w-2 h-2 rounded-full bg-secondary"></div>
 </div>
 </div>
 </div>
-<!-- Telemetry Index Blueprint Dossier (Scattered & Layered) -->
-<div class="bg-surface-container-lowest p-space-lg shadow-sm border border-on-surface/20 flex flex-col gap-space-md relative overflow-hidden">
-<div class="absolute -right-8 -top-8 w-24 h-24 border border-outline-variant/30 rounded-full pointer-events-none"></div>
-<div class="flex items-center justify-between flex-wrap gap-2">
-<div class="flex items-center gap-space-xs font-label-md text-label-md uppercase font-black text-on-surface">
-<span class="text-secondary font-black text-lg -rotate-12 inline-block">+</span>
-<span class="font-headline-sm font-extrabold -skew-x-6 tracking-tight">TECHNICAL DOSSIER • SPEC: 10.12 // MHZ 101.200</span>
+<!-- Telemetry Index Blueprint Dossier -->
+<div class="bg-surface-container-lowest p-space-lg shadow-md flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs font-label-md text-label-md uppercase font-bold text-on-surface">
+<span class="text-secondary">+</span>
+<span class="">TECHNICAL DOSSIER • SPEC: 10.12 // MHZ 101.200</span>
 </div>
-<span class="font-label-sm text-label-sm text-secondary uppercase font-mono font-bold px-1.5 py-0.5 bg-surface-container border border-secondary/40 -rotate-2">REG_JH_97</span>
+<span class="font-label-sm text-label-sm text-outline uppercase font-mono">REG_JH_97</span>
 </div>
 <div class="grid grid-cols-1 sm:grid-cols-3 gap-space-md font-body-sm text-body-sm text-on-surface-variant">
-<div class="bg-surface-container-low p-space-sm border-l-2 border-on-surface/40 border-t border-r border-b border-outline-variant/30 relative shadow-sm">
-<div class="font-label-sm text-[9px] uppercase text-outline font-mono tracking-wider">HARDWARE CHASSIS</div>
-<div class="text-on-surface font-extrabold font-headline-sm text-sm mt-0.5">CRT SONY TRINITRON 14"</div>
-<div class="text-[11px] mt-1 leading-snug font-body-sm">Calibrated for broadcast surveillance and audio telemetry.</div>
+<div class="bg-surface-container p-space-sm">
+<div class="font-label-sm text-[9px] uppercase text-outline">HARDWARE CHASSIS</div>
+<div class="text-on-surface font-bold font-label-md mt-0.5">CRT SONY TRINITRON 14"</div>
+<div class="text-[11px] mt-1 leading-snug">Calibrated for broadcast surveillance and audio telemetry.</div>
 </div>
-<div class="bg-surface-container-low p-space-sm border-l-2 border-secondary border-t border-r border-b border-outline-variant/30 relative shadow-sm transform sm:-translate-y-1">
-<div class="font-label-sm text-[9px] uppercase text-secondary font-mono tracking-wider font-bold">FREQUENCY PROFILE</div>
-<div class="text-on-surface font-extrabold font-headline-sm text-sm mt-0.5">101.200 MHZ CARRIER</div>
-<div class="text-[11px] mt-1 leading-snug font-body-sm">Continuous birthday loop modulated through tape delay circuits.</div>
+<div class="bg-surface-container p-space-sm">
+<div class="font-label-sm text-[9px] uppercase text-outline">FREQUENCY PROFILE</div>
+<div class="text-on-surface font-bold font-label-md mt-0.5">101.200 MHZ CARRIER</div>
+<div class="text-[11px] mt-1 leading-snug">Continuous birthday loop modulated through tape delay circuits.</div>
 </div>
-<div class="bg-surface-container-low p-space-sm border-l-2 border-on-surface/40 border-t border-r border-b border-outline-variant/30 relative shadow-sm">
-<div class="font-label-sm text-[9px] uppercase text-outline font-mono tracking-wider">SYSTEM RECIPIENT</div>
-<div class="text-secondary font-black font-headline-sm text-sm mt-0.5">JAEHO [OCT 12. 2001]</div>
-<div class="text-[11px] mt-1 leading-snug font-body-sm">Dedication token verified with archival authorization master.</div>
+<div class="bg-surface-container p-space-sm">
+<div class="font-label-sm text-[9px] uppercase text-outline">SYSTEM RECIPIENT</div>
+<div class="text-secondary font-bold font-label-md mt-0.5">JAEHO [OCTOBER 12. 2001]</div>
+<div class="text-[11px] mt-1 leading-snug">Dedication token verified with archival authorization master.</div>
 </div>
 </div>
-<div class="bg-surface-container-low p-space-sm border border-outline-variant/60 flex items-center justify-between font-mono text-[10px] text-on-surface-variant flex-wrap gap-2">
-<div class="flex items-center gap-2">
-<span class="font-bold text-on-surface">BARCODE.REF:</span>
-<span class="tracking-widest font-bold text-on-surface-variant select-all">||||| | |||| ||| ||||| || | 1012</span>
-</div>
-<div class="italic text-[11px] text-outline font-body-sm glitch-text-hover">
-    "Kicking, squealing, Gucci little piggy..."
-  </div>
-</div>
+<div class="font-body-sm text-body-sm italic text-on-surface-variant bg-surface-container-low p-space-sm"><br></div>
 </div>
 </div>
 <!-- Right Column: Interactive Tape Deck & Track Manifest (5 Cols) -->
 <div class="lg:col-span-5 flex flex-col gap-space-lg">
-<!-- Console Control Deck Unit (Brutalist Box Shadow + Broken Typography) -->
-<div class="bg-surface-container-lowest p-space-lg shadow-sm border border-on-surface/20 flex flex-col gap-space-md relative">
-<div class="absolute -top-3.5 right-6 px-3 py-0.5 bg-surface-container-high text-on-surface font-mono text-[9px] uppercase font-bold tracking-widest shadow-sm -rotate-1 border border-outline-variant">
-  DECK-CALIBRATION: 10.12.97
-</div>
-<div class="flex items-center justify-between pb-space-xs border-b border-outline-variant/60">
+<!-- Console Control Deck Unit -->
+<div class="bg-surface-container-lowest p-space-lg shadow-xl flex flex-col gap-space-md">
+<!-- Card Header Stamp -->
+<div class="flex items-center justify-between pb-space-xs">
 <div class="flex flex-col">
-<span class="font-label-sm text-label-sm uppercase tracking-widest text-outline font-mono font-bold">MODULE ID: OKC-AUDIO-TAPE-01</span>
-<h2 class="font-headline-sm text-headline-sm uppercase text-on-surface font-extrabold tracking-tight -skew-x-3">VINTAGE CONSOLE DECK</h2>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline font-mono">MODULE ID: OKC-AUDIO-TAPE-01</span>
+<h2 class="font-headline-sm text-headline-sm uppercase text-on-surface font-bold tracking-tight">VINTAGE CONSOLE DECK</h2>
 </div>
-<span class="bg-secondary-fixed/30 text-secondary px-space-xs py-1 font-label-sm text-label-sm uppercase font-mono font-black border border-secondary/40 rotate-1">ACTIVE 10.12</span>
+<span class="bg-surface-container-high px-space-xs py-1 font-label-sm text-label-sm uppercase font-mono font-bold text-secondary">ACTIVE 10.12</span>
 </div>
-<div class="bg-surface-container-low p-space-md flex flex-col gap-space-xs border border-on-surface/15 relative shadow-inner">
+<!-- Active Track Display Card -->
+<div class="bg-surface-container-low p-space-md flex flex-col gap-space-xs">
 <div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
-<span class="text-secondary font-black uppercase tracking-wider font-mono" id="currentTrackIndex">TRACK 11 OF 12</span>
-<span class="font-mono uppercase text-outline text-[10px] font-bold" id="activeFmt">44.1kHz // 16-BIT TAPE</span>
+<span class="text-secondary font-bold uppercase" id="currentTrackIndex">TRACK 01 OF 12</span>
+<span class="font-mono uppercase text-outline" id="activeFmt">44.1kHz // 16-BIT TAPE</span>
 </div>
-<div class="text-headline-md font-headline-md font-extrabold text-on-surface tracking-tighter truncate uppercase glitch-text-hover" id="currentTrackTitle">Lucky [Birthday Special // 10.12 Jaeho Cut]</div>
+<div class="text-headline-md font-headline-md font-bold text-on-surface tracking-tight truncate" id="currentTrackTitle">Lucky</div>
 <div class="font-body-sm text-body-sm text-on-surface-variant flex items-center justify-between pt-1">
-<span class="font-mono text-[11px] font-bold" id="currentTrackSub">Radiohead • OK Computer (10.12 Edition)</span>
-<span class="px-space-xs py-0.5 bg-secondary text-on-secondary font-label-sm text-[9px] font-black uppercase tracking-widest border border-primary animate-pulse" id="badgeSpecial">// 10.12 BIRTHDAY SPECIAL</span>
+<span id="currentTrackSub" class="">Radiohead • OK Computer (10.12 Edition)</span>
+<span class="px-space-xs py-0.5 bg-secondary text-on-secondary font-label-sm text-[9px] font-bold uppercase animate-pulse" id="badgeSpecial">// 10.12</span>
 </div>
+<!-- Waveform Scrubber & Timers -->
 <div class="mt-space-sm flex flex-col gap-1">
-<div class="relative w-full h-4 bg-surface-container-highest border border-outline-variant/60 cursor-pointer overflow-hidden shadow-inner" id="scrubberBar">
-<div class="h-full bg-secondary transition-all duration-100" id="scrubberProgress" style="width: 0.772201%;"></div>
+<div class="relative w-full h-3 bg-surface-container-highest cursor-pointer overflow-hidden" id="scrubberBar">
+<div class="h-full bg-primary transition-all duration-100" id="scrubberProgress" style="width: 0.772201%;"></div>
 <div class="absolute inset-0 flex items-center justify-between px-1 pointer-events-none opacity-20">
-<div class="w-0.5 h-full bg-on-surface"></div>
-<div class="w-0.5 h-full bg-on-surface"></div>
 <div class="w-0.5 h-full bg-on-surface"></div>
 <div class="w-0.5 h-full bg-on-surface"></div>
 <div class="w-0.5 h-full bg-on-surface"></div>
@@ -256,260 +153,84 @@
 </div>
 </div>
 <div class="flex items-center justify-between font-label-sm text-label-sm font-mono text-on-surface-variant">
-<span class="font-bold text-on-surface" id="labelElapsed">00:02</span>
-<span class="text-outline font-bold" id="labelTotal">04:19</span>
+<span id="labelElapsed" class="">00:02</span>
+<span class="text-outline" id="labelTotal">04:19</span>
 </div>
 </div>
 </div>
+<!-- Mechanical Playback Transport Buttons -->
 <div class="grid grid-cols-4 gap-space-sm pt-space-xs">
-<button class="py-space-md bg-surface-container hover:bg-surface-container-high text-on-surface flex flex-col items-center justify-center gap-1 border border-on-surface/20 shadow-sm transition-all active:translate-x-0.5 active:translate-y-0.5 cursor-pointer" id="prevBtn" type="button">
-<span class="material-symbols-outlined text-[20px] font-bold">skip_previous</span>
-<span class="font-label-sm text-[9px] uppercase font-black">PREV</span>
+<button class="py-space-md bg-surface-container hover:bg-surface-container-high text-on-surface flex flex-col items-center justify-center gap-1 shadow-sm transition-transform active:scale-95" id="prevBtn" type="button">
+<span class="material-symbols-outlined text-[20px]">skip_previous</span>
+<span class="font-label-sm text-[9px] uppercase font-bold">PREV</span>
 </button>
-<button class="col-span-2 py-space-md bg-surface-container-highest hover:bg-surface-container-high text-on-surface flex items-center justify-center gap-space-xs border border-on-surface/20 shadow-sm transition-all active:translate-x-0.5 active:translate-y-0.5 cursor-pointer" id="playPauseBtn" type="button">
-<span class="material-symbols-outlined text-[24px] text-secondary font-bold" id="playPauseIcon">pause</span>
-<span class="font-label-md text-label-md uppercase font-extrabold tracking-wider" id="playPauseText">PAUSE // RUN</span>
+<button class="col-span-2 py-space-md bg-primary hover:bg-inverse-surface text-on-primary flex items-center justify-center gap-space-xs shadow-md transition-transform active:scale-95" id="playPauseBtn" type="button">
+<span class="material-symbols-outlined text-[24px]" id="playPauseIcon">play_arrow</span>
+<span class="font-label-md text-label-md uppercase font-bold tracking-wider" id="playPauseText">RESUME // PLAY</span>
 </button>
-<button class="py-space-md bg-surface-container hover:bg-surface-container-high text-on-surface flex flex-col items-center justify-center gap-1 border border-on-surface/20 shadow-sm transition-all active:translate-x-0.5 active:translate-y-0.5 cursor-pointer" id="nextBtn" type="button">
-<span class="material-symbols-outlined text-[20px] font-bold">skip_next</span>
-<span class="font-label-sm text-[9px] uppercase font-black">NEXT</span>
+<button class="py-space-md bg-surface-container hover:bg-surface-container-high text-on-surface flex flex-col items-center justify-center gap-1 shadow-sm transition-transform active:scale-95" id="nextBtn" type="button">
+<span class="material-symbols-outlined text-[20px]">skip_next</span>
+<span class="font-label-sm text-[9px] uppercase font-bold">NEXT</span>
 </button>
 </div>
-<div class="bg-surface-container p-space-sm flex items-center justify-between gap-space-md border border-outline-variant/60 shadow-sm">
+<!-- Volume & Saturation Mix Panel -->
+<div class="bg-surface-container p-space-sm flex items-center justify-between gap-space-md">
 <div class="flex items-center gap-space-xs text-on-surface font-label-sm text-label-sm">
-<span class="material-symbols-outlined text-[16px] text-secondary font-bold">volume_up</span>
-<span class="uppercase font-black font-mono">GAIN:</span>
+<span class="material-symbols-outlined text-[16px] text-secondary">volume_up</span>
+<span class="uppercase font-bold">GAIN:</span>
 </div>
-<input class="w-full accent-secondary h-2 bg-surface-container-highest cursor-pointer border border-outline-variant/60" id="volumeSlider" max="100" min="0" type="range" value="82">
-<span class="font-mono font-label-sm text-label-sm text-on-surface font-black min-w-[36px] text-right bg-surface-container-lowest px-1 border border-outline-variant" id="volumeVal">82%</span>
+<input class="w-full accent-primary h-1 bg-surface-container-highest cursor-pointer" id="volumeSlider" max="100" min="0" type="range" value="82">
+<span class="font-mono font-label-sm text-label-sm text-on-surface-variant min-w-[32px] text-right" id="volumeVal">82%</span>
 </div>
 </div>
-<!-- Track Playlist Manifest Ledger Card (Complete 12 Tracks) -->
-<div class="bg-surface-container-lowest p-space-lg shadow-sm border border-on-surface/20 flex flex-col gap-space-sm relative">
-<div class="flex items-center justify-between pb-space-xs border-b border-outline-variant/60">
-<div class="flex items-center gap-space-xs font-label-md text-label-md uppercase font-extrabold text-on-surface">
-<span class="text-secondary font-black">#</span>
-<span class="font-headline-sm text-base tracking-tight -skew-x-3">TRACK MANIFEST • SELECTION LEDGER</span>
+<!-- Track Playlist Manifest Ledger Card -->
+<div class="bg-surface-container-lowest p-space-lg shadow-md flex flex-col gap-space-sm">
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-space-xs font-label-md text-label-md uppercase font-bold text-on-surface">
+<span class="text-secondary">#</span>
+<span class="">TRACK MANIFEST • SELECTION LEDGER</span>
 </div>
-<span class="text-on-surface font-label-sm text-label-sm uppercase font-mono font-bold bg-secondary-fixed/30 px-1.5 py-0.5 border border-secondary/40">12 CUTS COMPLETE</span>
+<span class="text-outline font-label-sm text-label-sm uppercase font-mono">12 CUTS</span>
 </div>
-<div class="flex flex-col gap-1.5" id="trackList"><div class="track-row p-space-sm hover:bg-surface-container cursor-pointer flex items-center justify-between group transition-all bg-surface-container-low border border-transparent hover:border-outline-variant" data-track="0"><div class="flex items-center gap-space-sm min-w-0"><span class="font-mono font-label-sm text-label-sm text-outline font-bold">01.</span><span class="font-headline-sm text-sm text-on-surface font-normal truncate group-hover:text-secondary group-hover:skew-x-2 transition-transform">Airbag</span></div><div class="flex items-center gap-space-sm flex-shrink-0"><span class="font-mono font-label-sm text-label-sm text-on-surface-variant font-bold">04:44</span><span class="material-symbols-outlined text-[16px] group-hover:opacity-100 track-indicator opacity-0 text-outline">play_arrow</span></div></div><div class="track-row p-space-sm hover:bg-surface-container cursor-pointer flex items-center justify-between group transition-all bg-surface-container-low border border-transparent hover:border-outline-variant" data-track="1"><div class="flex items-center gap-space-sm min-w-0"><span class="font-mono font-label-sm text-label-sm text-outline font-bold">02.</span><span class="font-headline-sm text-sm text-on-surface font-normal truncate group-hover:text-secondary group-hover:skew-x-2 transition-transform">Paranoid Android</span></div><div class="flex items-center gap-space-sm flex-shrink-0"><span class="font-mono font-label-sm text-label-sm text-on-surface-variant font-bold">06:23</span><span class="material-symbols-outlined text-[16px] group-hover:opacity-100 track-indicator opacity-0 text-outline">play_arrow</span></div></div><div class="track-row p-space-sm hover:bg-surface-container cursor-pointer flex items-center justify-between group transition-all bg-surface-container-low border border-transparent hover:border-outline-variant" data-track="2"><div class="flex items-center gap-space-sm min-w-0"><span class="font-mono font-label-sm text-label-sm text-outline font-bold">03.</span><span class="font-headline-sm text-sm text-on-surface font-normal truncate group-hover:text-secondary group-hover:skew-x-2 transition-transform">Subterranean Homesick Alien</span></div><div class="flex items-center gap-space-sm flex-shrink-0"><span class="font-mono font-label-sm text-label-sm text-on-surface-variant font-bold">04:27</span><span class="material-symbols-outlined text-[16px] group-hover:opacity-100 track-indicator opacity-0 text-outline">play_arrow</span></div></div><div class="track-row p-space-sm hover:bg-surface-container cursor-pointer flex items-center justify-between group transition-all bg-surface-container-low border border-transparent hover:border-outline-variant" data-track="3"><div class="flex items-center gap-space-sm min-w-0"><span class="font-mono font-label-sm text-label-sm text-outline font-bold">04.</span><span class="font-headline-sm text-sm text-on-surface font-normal truncate group-hover:text-secondary group-hover:skew-x-2 transition-transform">Exit Music (For a Film)</span></div><div class="flex items-center gap-space-sm flex-shrink-0"><span class="font-mono font-label-sm text-label-sm text-on-surface-variant font-bold">04:24</span><span class="material-symbols-outlined text-[16px] group-hover:opacity-100 track-indicator opacity-0 text-outline">play_arrow</span></div></div><div class="track-row p-space-sm hover:bg-surface-container cursor-pointer flex items-center justify-between group transition-all bg-surface-container-low border border-transparent hover:border-outline-variant" data-track="4"><div class="flex items-center gap-space-sm min-w-0"><span class="font-mono font-label-sm text-label-sm text-outline font-bold">05.</span><span class="font-headline-sm text-sm text-on-surface font-normal truncate group-hover:text-secondary group-hover:skew-x-2 transition-transform">Let Down</span></div><div class="flex items-center gap-space-sm flex-shrink-0"><span class="font-mono font-label-sm text-label-sm text-on-surface-variant font-bold">04:59</span><span class="material-symbols-outlined text-[16px] group-hover:opacity-100 track-indicator opacity-0 text-outline">play_arrow</span></div></div><div class="track-row p-space-sm hover:bg-surface-container cursor-pointer flex items-center justify-between group transition-all bg-surface-container-low border border-transparent hover:border-outline-variant" data-track="5"><div class="flex items-center gap-space-sm min-w-0"><span class="font-mono font-label-sm text-label-sm text-outline font-bold">06.</span><span class="font-headline-sm text-sm text-on-surface font-normal truncate group-hover:text-secondary group-hover:skew-x-2 transition-transform">Karma Police</span></div><div class="flex items-center gap-space-sm flex-shrink-0"><span class="font-mono font-label-sm text-label-sm text-on-surface-variant font-bold">04:21</span><span class="material-symbols-outlined text-[16px] group-hover:opacity-100 track-indicator opacity-0 text-outline">play_arrow</span></div></div><div class="track-row p-space-sm hover:bg-surface-container cursor-pointer flex items-center justify-between group transition-all bg-surface-container-low border border-transparent hover:border-outline-variant" data-track="6"><div class="flex items-center gap-space-sm min-w-0"><span class="font-mono font-label-sm text-label-sm text-outline font-bold">07.</span><span class="font-headline-sm text-sm text-on-surface font-normal truncate group-hover:text-secondary group-hover:skew-x-2 transition-transform">Fitter Happier</span></div><div class="flex items-center gap-space-sm flex-shrink-0"><span class="font-mono font-label-sm text-label-sm text-on-surface-variant font-bold">01:57</span><span class="material-symbols-outlined text-[16px] group-hover:opacity-100 track-indicator opacity-0 text-outline">play_arrow</span></div></div><div class="track-row p-space-sm hover:bg-surface-container cursor-pointer flex items-center justify-between group transition-all bg-surface-container-low border border-transparent hover:border-outline-variant" data-track="7"><div class="flex items-center gap-space-sm min-w-0"><span class="font-mono font-label-sm text-label-sm text-outline font-bold">08.</span><span class="font-headline-sm text-sm text-on-surface font-normal truncate group-hover:text-secondary group-hover:skew-x-2 transition-transform">Electioneering</span></div><div class="flex items-center gap-space-sm flex-shrink-0"><span class="font-mono font-label-sm text-label-sm text-on-surface-variant font-bold">03:50</span><span class="material-symbols-outlined text-[16px] group-hover:opacity-100 track-indicator opacity-0 text-outline">play_arrow</span></div></div><div class="track-row p-space-sm hover:bg-surface-container cursor-pointer flex items-center justify-between group transition-all bg-surface-container-low border border-transparent hover:border-outline-variant" data-track="8"><div class="flex items-center gap-space-sm min-w-0"><span class="font-mono font-label-sm text-label-sm text-outline font-bold">09.</span><span class="font-headline-sm text-sm text-on-surface font-normal truncate group-hover:text-secondary group-hover:skew-x-2 transition-transform">Climbing Up the Walls</span></div><div class="flex items-center gap-space-sm flex-shrink-0"><span class="font-mono font-label-sm text-label-sm text-on-surface-variant font-bold">04:45</span><span class="material-symbols-outlined text-[16px] group-hover:opacity-100 track-indicator opacity-0 text-outline">play_arrow</span></div></div><div class="track-row p-space-sm hover:bg-surface-container cursor-pointer flex items-center justify-between group transition-all bg-surface-container-low border border-transparent hover:border-outline-variant" data-track="9"><div class="flex items-center gap-space-sm min-w-0"><span class="font-mono font-label-sm text-label-sm text-outline font-bold">10.</span><span class="font-headline-sm text-sm text-on-surface font-normal truncate group-hover:text-secondary group-hover:skew-x-2 transition-transform">No Surprises</span></div><div class="flex items-center gap-space-sm flex-shrink-0"><span class="font-mono font-label-sm text-label-sm text-on-surface-variant font-bold">03:48</span><span class="material-symbols-outlined text-[16px] group-hover:opacity-100 track-indicator opacity-0 text-outline">play_arrow</span></div></div><div class="track-row p-space-sm cursor-pointer flex items-center justify-between group transition-all bg-surface-container-high border border-primary shadow-sm" data-track="10"><div class="flex items-center gap-space-sm min-w-0"><span class="font-mono font-label-sm text-label-sm text-secondary font-black">11.</span><div class="flex items-center gap-1 min-w-0"><span class="font-headline-sm text-sm text-on-surface font-normal truncate group-hover:text-secondary -skew-x-2">Lucky</span><span class="text-[9px] font-bold px-1 py-0.2 bg-secondary text-on-secondary uppercase font-mono border border-secondary/40">10.12 JAEHO CUT</span></div></div><div class="flex items-center gap-space-sm flex-shrink-0"><span class="font-mono font-label-sm text-label-sm text-on-surface font-black">04:19</span><span class="material-symbols-outlined text-[16px] track-indicator text-secondary opacity-100">volume_up</span></div></div><div class="track-row p-space-sm hover:bg-surface-container cursor-pointer flex items-center justify-between group transition-all bg-surface-container-low border border-transparent hover:border-outline-variant" data-track="11"><div class="flex items-center gap-space-sm min-w-0"><span class="font-mono font-label-sm text-label-sm text-outline font-bold">12.</span><span class="font-headline-sm text-sm text-on-surface font-normal truncate group-hover:text-secondary group-hover:skew-x-2 transition-transform">The Tourist</span></div><div class="flex items-center gap-space-sm flex-shrink-0"><span class="font-mono font-label-sm text-label-sm text-on-surface-variant font-bold">05:24</span><span class="material-symbols-outlined text-[16px] group-hover:opacity-100 track-indicator opacity-0 text-outline">play_arrow</span></div></div></div>
-<div class="pt-space-sm flex items-center justify-between gap-space-sm font-label-md text-label-md flex-wrap">
-<button class="p-space-sm bg-surface-container-low hover:bg-surface-container-high text-on-surface flex items-center gap-2 uppercase transition-all font-mono text-xs border border-on-surface/20 shadow-sm cursor-pointer" id="exploreMapBtn" type="button">
-<span class="material-symbols-outlined text-[16px] text-secondary">explore</span>
-<span class="font-bold tracking-wider">[EXPLORE MAP OF SOUL]</span>
-</button>
-<a class="p-space-sm bg-surface-container-highest hover:bg-surface-container-high text-on-surface flex items-center gap-2 uppercase transition-all font-black border border-on-surface/20 shadow-sm -rotate-1 active:translate-x-0.5 active:translate-y-0.5" data-path="birthday-transmission" href="birthday.html"><span class="tracking-wider">[PROCEED TO 03 // BIRTHDAY DEDICATION]</span><span class="material-symbols-outlined text-[16px] text-secondary font-bold">arrow_forward</span></a>
+<!-- Interactive Track List -->
+<div class="flex flex-col gap-1.5" id="trackList"><div class="track-row p-space-sm cursor-pointer flex items-center justify-between group transition-colors bg-surface-container-high shadow-sm" data-track="0"><div class="flex items-center gap-space-sm min-w-0"><span class="font-mono font-label-sm text-label-sm text-secondary font-bold">01.</span><div class="flex flex-col min-w-0"><span class="font-body-md text-body-md text-on-surface font-bold truncate group-hover:text-secondary">Airbag</span><span class="font-label-sm text-[9px] text-on-surface-variant uppercase font-mono">OK COMPUTER ARCHIVE</span></div></div><div class="flex items-center gap-space-sm flex-shrink-0"><span class="font-mono font-label-sm text-label-sm text-on-surface-variant">04:44</span><span class="material-symbols-outlined text-[16px] track-indicator text-secondary opacity-100">volume_up</span></div></div><div class="track-row p-space-sm hover:bg-surface-container cursor-pointer flex items-center justify-between group transition-colors bg-surface-container-low" data-track="1"><div class="flex items-center gap-space-sm min-w-0"><span class="font-mono font-label-sm text-label-sm text-outline">02.</span><div class="flex flex-col min-w-0"><span class="font-body-md text-body-md text-on-surface font-bold truncate group-hover:text-secondary">Paranoid Android</span><span class="font-label-sm text-[9px] text-on-surface-variant uppercase font-mono">OK COMPUTER ARCHIVE</span></div></div><div class="flex items-center gap-space-sm flex-shrink-0"><span class="font-mono font-label-sm text-label-sm text-on-surface-variant">06:23</span><span class="material-symbols-outlined text-[16px] group-hover:opacity-100 track-indicator opacity-0 text-outline">play_arrow</span></div></div><div class="track-row p-space-sm hover:bg-surface-container cursor-pointer flex items-center justify-between group transition-colors bg-surface-container-low" data-track="2"><div class="flex items-center gap-space-sm min-w-0"><span class="font-mono font-label-sm text-label-sm text-outline">03.</span><div class="flex flex-col min-w-0"><span class="font-body-md text-body-md text-on-surface font-bold truncate group-hover:text-secondary">Subterranean Homesick Alien</span><span class="font-label-sm text-[9px] text-on-surface-variant uppercase font-mono">OK COMPUTER ARCHIVE</span></div></div><div class="flex items-center gap-space-sm flex-shrink-0"><span class="font-mono font-label-sm text-label-sm text-on-surface-variant">04:27</span><span class="material-symbols-outlined text-[16px] group-hover:opacity-100 track-indicator opacity-0 text-outline">play_arrow</span></div></div><div class="track-row p-space-sm hover:bg-surface-container cursor-pointer flex items-center justify-between group transition-colors bg-surface-container-low" data-track="3"><div class="flex items-center gap-space-sm min-w-0"><span class="font-mono font-label-sm text-label-sm text-outline">04.</span><div class="flex flex-col min-w-0"><span class="font-body-md text-body-md text-on-surface font-bold truncate group-hover:text-secondary">Exit Music (For a Film)</span><span class="font-label-sm text-[9px] text-on-surface-variant uppercase font-mono">OK COMPUTER ARCHIVE</span></div></div><div class="flex items-center gap-space-sm flex-shrink-0"><span class="font-mono font-label-sm text-label-sm text-on-surface-variant">04:24</span><span class="material-symbols-outlined text-[16px] group-hover:opacity-100 track-indicator opacity-0 text-outline">play_arrow</span></div></div><div class="track-row p-space-sm hover:bg-surface-container cursor-pointer flex items-center justify-between group transition-colors bg-surface-container-low" data-track="4"><div class="flex items-center gap-space-sm min-w-0"><span class="font-mono font-label-sm text-label-sm text-outline">05.</span><div class="flex flex-col min-w-0"><span class="font-body-md text-body-md text-on-surface font-bold truncate group-hover:text-secondary">Let Down</span><span class="font-label-sm text-[9px] text-on-surface-variant uppercase font-mono">OK COMPUTER ARCHIVE</span></div></div><div class="flex items-center gap-space-sm flex-shrink-0"><span class="font-mono font-label-sm text-label-sm text-on-surface-variant">04:59</span><span class="material-symbols-outlined text-[16px] group-hover:opacity-100 track-indicator opacity-0 text-outline">play_arrow</span></div></div><div class="track-row p-space-sm hover:bg-surface-container cursor-pointer flex items-center justify-between group transition-colors bg-surface-container-low" data-track="5"><div class="flex items-center gap-space-sm min-w-0"><span class="font-mono font-label-sm text-label-sm text-outline">06.</span><div class="flex flex-col min-w-0"><span class="font-body-md text-body-md text-on-surface font-bold truncate group-hover:text-secondary">Karma Police</span><span class="font-label-sm text-[9px] text-on-surface-variant uppercase font-mono">OK COMPUTER ARCHIVE</span></div></div><div class="flex items-center gap-space-sm flex-shrink-0"><span class="font-mono font-label-sm text-label-sm text-on-surface-variant">04:21</span><span class="material-symbols-outlined text-[16px] group-hover:opacity-100 track-indicator opacity-0 text-outline">play_arrow</span></div></div><div class="track-row p-space-sm hover:bg-surface-container cursor-pointer flex items-center justify-between group transition-colors bg-surface-container-low" data-track="6"><div class="flex items-center gap-space-sm min-w-0"><span class="font-mono font-label-sm text-label-sm text-outline">07.</span><div class="flex flex-col min-w-0"><span class="font-body-md text-body-md text-on-surface font-bold truncate group-hover:text-secondary">Fitter Happier</span><span class="font-label-sm text-[9px] text-on-surface-variant uppercase font-mono">OK COMPUTER ARCHIVE</span></div></div><div class="flex items-center gap-space-sm flex-shrink-0"><span class="font-mono font-label-sm text-label-sm text-on-surface-variant">01:57</span><span class="material-symbols-outlined text-[16px] group-hover:opacity-100 track-indicator opacity-0 text-outline">play_arrow</span></div></div><div class="track-row p-space-sm hover:bg-surface-container cursor-pointer flex items-center justify-between group transition-colors bg-surface-container-low" data-track="7"><div class="flex items-center gap-space-sm min-w-0"><span class="font-mono font-label-sm text-label-sm text-outline">08.</span><div class="flex flex-col min-w-0"><span class="font-body-md text-body-md text-on-surface font-bold truncate group-hover:text-secondary">Electioneering</span><span class="font-label-sm text-[9px] text-on-surface-variant uppercase font-mono">OK COMPUTER ARCHIVE</span></div></div><div class="flex items-center gap-space-sm flex-shrink-0"><span class="font-mono font-label-sm text-label-sm text-on-surface-variant">03:50</span><span class="material-symbols-outlined text-[16px] group-hover:opacity-100 track-indicator opacity-0 text-outline">play_arrow</span></div></div><div class="track-row p-space-sm hover:bg-surface-container cursor-pointer flex items-center justify-between group transition-colors bg-surface-container-low" data-track="8"><div class="flex items-center gap-space-sm min-w-0"><span class="font-mono font-label-sm text-label-sm text-outline">09.</span><div class="flex flex-col min-w-0"><span class="font-body-md text-body-md text-on-surface font-bold truncate group-hover:text-secondary">Climbing Up the Walls</span><span class="font-label-sm text-[9px] text-on-surface-variant uppercase font-mono">OK COMPUTER ARCHIVE</span></div></div><div class="flex items-center gap-space-sm flex-shrink-0"><span class="font-mono font-label-sm text-label-sm text-on-surface-variant">04:45</span><span class="material-symbols-outlined text-[16px] group-hover:opacity-100 track-indicator opacity-0 text-outline">play_arrow</span></div></div><div class="track-row p-space-sm hover:bg-surface-container cursor-pointer flex items-center justify-between group transition-colors bg-surface-container-low" data-track="9"><div class="flex items-center gap-space-sm min-w-0"><span class="font-mono font-label-sm text-label-sm text-outline">10.</span><div class="flex flex-col min-w-0"><span class="font-body-md text-body-md text-on-surface font-bold truncate group-hover:text-secondary">No Surprises</span><span class="font-label-sm text-[9px] text-on-surface-variant uppercase font-mono">OK COMPUTER ARCHIVE</span></div></div><div class="flex items-center gap-space-sm flex-shrink-0"><span class="font-mono font-label-sm text-label-sm text-on-surface-variant">03:48</span><span class="material-symbols-outlined text-[16px] group-hover:opacity-100 track-indicator opacity-0 text-outline">play_arrow</span></div></div><div class="track-row p-space-sm hover:bg-secondary-fixed/50 cursor-pointer flex items-center justify-between group transition-colors bg-secondary-fixed/30" data-track="10"><div class="flex items-center gap-space-sm min-w-0"><span class="font-mono font-label-sm text-label-sm text-secondary font-bold">11.</span><div class="flex flex-col min-w-0"><div class="flex items-center gap-1"><span class="font-body-md text-body-md text-on-surface font-bold truncate group-hover:text-secondary">Lucky</span><span class="text-[9px] font-bold px-1 py-0.2 bg-secondary text-on-secondary uppercase font-mono">10.12 JAEHO CUT</span></div><span class="font-label-sm text-[9px] text-secondary font-mono">BIRTHDAY SPECIAL EXTENDED EDITION</span></div></div><div class="flex items-center gap-space-sm flex-shrink-0"><span class="font-mono font-label-sm text-label-sm text-on-surface font-bold">04:19</span><span class="material-symbols-outlined text-[16px] group-hover:opacity-100 track-indicator opacity-0 text-outline">play_arrow</span></div></div><div class="track-row p-space-sm hover:bg-surface-container cursor-pointer flex items-center justify-between group transition-colors bg-surface-container-low" data-track="11"><div class="flex items-center gap-space-sm min-w-0"><span class="font-mono font-label-sm text-label-sm text-outline">12.</span><div class="flex flex-col min-w-0"><span class="font-body-md text-body-md text-on-surface font-bold truncate group-hover:text-secondary">The Tourist</span><span class="font-label-sm text-[9px] text-on-surface-variant uppercase font-mono">OK COMPUTER ARCHIVE</span></div></div><div class="flex items-center gap-space-sm flex-shrink-0"><span class="font-mono font-label-sm text-label-sm text-on-surface-variant">05:24</span><span class="material-symbols-outlined text-[16px] group-hover:opacity-100 track-indicator opacity-0 text-outline">play_arrow</span></div></div></div>
+<!-- Bottom Routing Quick-Links -->
+<div class="pt-space-sm flex items-center justify-between gap-space-sm font-label-md text-label-md"><div class="flex items-center gap-space-xs text-outline font-label-sm uppercase font-mono"><span class="">PAGE 01 / 02</span><span class="">//</span><span class="text-secondary font-bold">TRANSMITTING</span></div><a class="p-space-sm bg-primary hover:bg-inverse-surface text-on-primary flex items-center gap-1 uppercase transition-colors font-bold" data-path="birthday-transmission" href="index2.html"><span class="">[PROCEED TO 02 // BIRTHDAY DEDICATION]</span><span class="material-symbols-outlined text-[14px]">arrow_forward</span></a></div>
 </div>
 </div>
 </div>
-</div>
-<!-- Supplementary Paper Strip: Radiohead 1997 Telemetry Stamp (Deconstructed) -->
-<div class="bg-surface-container-lowest p-space-md shadow-sm border border-on-surface/20 flex flex-col sm:flex-row items-center justify-between gap-space-sm font-label-sm text-label-sm text-on-surface-variant relative overflow-hidden">
-<div class="absolute -left-4 top-1/2 -translate-y-1/2 font-mono text-[9px] text-outline opacity-20 select-none">/// 1997-NOW ///</div>
-<div class="flex items-center gap-space-md pl-2">
-<span class="font-mono text-primary font-black bg-surface-container px-1 border border-outline">[OKC.DATA.STREAM]</span>
-<span class="font-body-sm text-body-sm text-on-surface font-bold italic tracking-wide">“Pull me out of the aircrash... pull me out of the lake.”</span>
+<!-- Supplementary Paper Strip: Radiohead 1997 Telemetry Stamp -->
+<div class="bg-surface-container-lowest p-space-md shadow-sm flex flex-col sm:flex-row items-center justify-between gap-space-sm font-label-sm text-label-sm text-on-surface-variant">
+<div class="flex items-center gap-space-md">
+<span class="font-mono text-outline">[OKC.DATA.STREAM]</span>
+<span class="font-body-sm text-body-sm text-on-surface">“Pull me out of the aircrash... pull me out of the lake.”</span>
 </div>
 <div class="flex items-center gap-space-sm font-mono text-[10px]">
-<span class="bg-surface-container-high px-1 border border-outline font-bold">ENCODING: 1012-JH-FLAC</span>
-<span class="text-secondary font-black tracking-wider">● ARCHIVE INTEGRITY 100%</span>
-</div>
-</div>
-</div>
-<!-- ============================================== -->
-<!-- VIEW CONTAINER 2: MAP OF THE SOUL (INTEGRATED) -->
-<!-- ============================================== -->
-<div class="max-w-[1280px] w-full mx-auto px-margin lg:px-margin-desktop py-space-lg hidden flex-col gap-space-lg relative z-10 transition-opacity duration-300" id="mapOfSoulSection">
-<!-- Map Header Bar with Brutalist Glitch Tags -->
-<div class="bg-surface-container-lowest p-space-md shadow-sm border border-on-surface/20 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-space-md relative overflow-hidden">
-<div class="flex items-center gap-space-md flex-wrap">
-<div class="px-space-sm py-1 bg-secondary text-on-secondary font-label-sm text-label-sm font-black uppercase tracking-widest -rotate-2 border border-primary shadow-brutal-sm">
-        PSYCHOGEOGRAPHY // RADAR 10.12
-      </div>
-<div>
-<h2 class="font-headline-md text-headline-md font-extrabold uppercase text-on-surface tracking-tight -skew-x-3 glitch-text-hover">
-          MAP OF THE SOUL : 1997-2024 TOPOLOGY
-        </h2>
-<div class="font-mono text-label-sm text-[11px] text-on-surface-variant flex items-center gap-2">
-<span class="">COORDINATES: LAT 10.1200° N // LONG 1997.1012° E</span>
-<span class="text-secondary font-bold">ALT: 419m MSL</span>
-</div>
-</div>
-</div>
-<div class="flex items-center gap-space-sm">
-<button class="px-space-sm py-1.5 bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm uppercase flex items-center gap-1 border border-on-surface/20 shadow-sm cursor-pointer" id="switchBackAudioBtn" type="button">
-<span class="material-symbols-outlined text-[16px] text-secondary">arrow_back</span>
-<span class="font-bold">RETURN TO AUDIO TERMINAL</span>
-</button>
-<button class="px-space-sm py-1.5 bg-surface-container-lowest text-secondary font-label-sm text-label-sm uppercase border border-secondary/40 font-mono tracking-wider" id="glitchPulseBtn" type="button">
-        [TRIGGER SECTOR PULSE]
-      </button>
-</div>
-</div>
-<!-- Main Map Interactive Canvas & Node Telemetry Panel -->
-<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-desktop items-start">
-<!-- Stylized Psychogeographical Map Container (8 cols) -->
-<div class="lg:col-span-8 flex flex-col gap-space-md">
-<div class="relative bg-surface-container-lowest border border-on-surface/20 shadow-sm overflow-hidden blueprint-grid p-2 group">
-<!-- Coordinate HUD Overlay Top -->
-<div class="absolute top-3 left-4 z-20 flex items-center gap-2 font-mono text-[9px] text-on-surface bg-surface-container-lowest/90 px-2 py-0.5 border border-outline-variant shadow-sm pointer-events-none">
-<span class="w-2 h-2 bg-secondary animate-ping"></span>
-<span class="">GRID SEC: OKC-10.12-SECTOR-A</span>
-<span class="text-outline">|</span>
-<span class="text-secondary font-bold" id="radarCoordReadout">X: 420.19 // Y: 101.20</span>
-</div>
-<div class="absolute top-3 right-4 z-20 flex items-center gap-2 font-mono text-[9px] text-outline bg-surface-container-lowest/90 px-2 py-0.5 border border-outline-variant shadow-sm pointer-events-none">
-<span class="">SWEEP FREQ: 1.012 Hz</span>
-<span class="text-secondary font-bold">RADAR: SYNCHRONIZED</span>
-</div>
-<!-- SVG Topological & Psychogeographical Map Graphic -->
-<div class="relative w-full aspect-[16/10] sm:aspect-[16/9] bg-surface-container-lowest overflow-hidden border border-on-surface/10"><img alt="Seoul Topographic Map" class="w-full h-full object-cover opacity-90 filter contrast-125" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDLcLwep2gDIG15lXaXekVSeKmdTVxtotA2IWm286k5eO5gdrfOlWRn1od90SEemcoTLbFiCb3mefnCj-xW7oc5Vq7Zbtwq9Q4aie8C3Gvwc5ES2oZjo__61KBR6yp3TWSJo7c9xUvBlXPL0M6iMWEsSMzgyVqzuA81GUp-mezyVyGDAnIprbAK8rPhMYIugr6WCglaEqqxoK0_Su-mETMhTyKqL87MEYhkIraIxrg-15fmBA_Pm4rP"><div class="absolute inset-0 pointer-events-none"><svg class="w-full h-full pointer-events-none" id="soulMapSvg" viewBox="0 0 800 480" xmlns="http://www.w3.org/2000/svg"><g class="map-radar-line" style="transform-origin: 415px 205px;"><line stroke="rgba(0, 99, 152, 0.7)" stroke-width="1.5" x1="415" x2="655" y1="205" y2="205"></line><polygon fill="rgba(91, 184, 254, 0.15)" points="415,205 655,160 655,205"></polygon></g><circle class="map-radar-line" cx="415" cy="205" fill="none" opacity="0.2" r="200" stroke="#006398" stroke-dasharray="6,6" stroke-width="1"></circle><circle cx="415" cy="205" fill="none" opacity="0.3" r="130" stroke="#006398" stroke-width="1"></circle><circle cx="415" cy="205" fill="none" opacity="0.45" r="60" stroke="#006398" stroke-dasharray="3,3" stroke-width="1"></circle><g class="map-node cursor-pointer group/node pointer-events-auto" data-desc="Highest elevation in the Seoul basin. Granite peaks overlooking the northern capital wall. The air is cold and clear above the radio smog." data-freq="107.50 MHz" data-id="1" data-lat="Lat 37.6608° N, Long 126.9930° E" data-name="Bukhansan Peak (Baegundae)" data-track="01 Airbag" transform="translate(390, 50)"><circle class="fill-surface-container-lowest group-hover/node:fill-secondary transition-colors" cx="0" cy="0" r="6" stroke="#006398" stroke-width="2"></circle><rect class="fill-surface-container-lowest stroke-on-surface/30 shadow-sm" height="16" rx="2" width="138" x="12" y="-8"></rect><text class="font-mono text-[9px] font-bold fill-on-surface select-none" x="16" y="4">01. BUKHANSAN (836m)</text></g><g class="map-node cursor-pointer group/node pointer-events-auto" data-desc="The historic heart of Seoul. Gyeongbokgung palace gates, printing houses, and acoustic echoes of 600 years of dynastic bureaucracy." data-freq="103.40 MHz" data-id="2" data-lat="Lat 37.5720° N, Long 126.9769° E" data-name="Jongno / Gwanghwamun Axis" data-track="02 Paranoid Android" transform="translate(365, 140)"><circle class="fill-surface-container-lowest group-hover/node:fill-secondary transition-colors" cx="0" cy="0" r="6" stroke="#000000" stroke-width="2"></circle><rect class="fill-surface-container-lowest stroke-on-surface/30 shadow-sm" height="16" rx="2" width="128" x="12" y="-8"></rect><text class="font-mono text-[9px] font-bold fill-on-surface select-none" x="16" y="4">02. JONGNO CENTRAL</text></g><g class="map-node cursor-pointer group/node pointer-events-auto" data-desc="Underground tape culture, indie frequencies, neon alleys, and river crossing terminal. Tape delays humming through pedestrian subways." data-freq="98.50 MHz" data-id="3" data-lat="Lat 37.5535° N, Long 126.9038° E" data-name="Mapo / Hongdae Node" data-track="04 Exit Music (For a Film)" transform="translate(200, 240)"><circle class="fill-surface-container-lowest group-hover/node:fill-secondary transition-colors" cx="0" cy="0" r="6" stroke="#ba1a1a" stroke-width="2"></circle><rect class="fill-surface-container-lowest stroke-on-surface/30 shadow-sm" height="16" rx="2" width="120" x="-130" y="-8"></rect><text class="font-mono text-[9px] font-bold fill-on-surface select-none" x="-125" y="4">04. MAPO DISTRICT</text></g><g class="map-node cursor-pointer group/node pointer-events-auto" data-desc="Electronics market alleys, radio transceivers, vintage capacitors, and central rail terminal. The core hardware backbone of the city." data-freq="99.90 MHz" data-id="4" data-lat="Lat 37.5326° N, Long 126.9900° E" data-name="Yongsan Telemetry Complex" data-track="06 Karma Police" transform="translate(380, 275)"><circle class="fill-surface-container-lowest group-hover/node:fill-secondary transition-colors" cx="0" cy="0" r="6" stroke="#000000" stroke-width="2"></circle><rect class="fill-surface-container-lowest stroke-on-surface/30 shadow-sm" height="16" rx="2" width="125" x="-135" y="-8"></rect><text class="font-mono text-[9px] font-bold fill-on-surface select-none" x="-130" y="4">06. YONGSAN SECTOR</text></g><g class="map-node cursor-pointer group/node pointer-events-auto" data-desc="High-density glass towers, fibre-optic grids, algorithmic finance, and fast-paced metropolitan pulse. Fitter, happier, fully wired." data-freq="108.00 MHz" data-id="5" data-lat="Lat 37.4979° N, Long 127.0276° E" data-name="Gangnam Tech Grid" data-track="07 Fitter Happier" transform="translate(540, 365)"><circle class="fill-surface-container-lowest group-hover/node:fill-secondary transition-colors" cx="0" cy="0" r="6" stroke="#76777d" stroke-width="2"></circle><rect class="fill-surface-container-lowest stroke-on-surface/30 shadow-sm" height="16" rx="2" width="128" x="12" y="-8"></rect><text class="font-mono text-[9px] font-bold fill-on-surface select-none" x="16" y="4">07. GANGNAM GRID</text></g><g class="map-node cursor-pointer group/node pointer-events-auto" data-desc="37.5512° N, 126.9882° E. 262m Mountain + 236m Tower. The supreme transmission antenna of the Seoul basin. Broadcasting Birthday frequencies dedicated to Jaeho on 10.12." data-freq="101.200 MHz SEOUL BEACON" data-id="6" data-lat="Lat 37.5512° N, Long 126.9882° E" data-name="Namsan Seoul Tower (Jaeho 10.12 Beacon)" data-track="11 Lucky [Jaeho 10.12 Cut]" transform="translate(415, 205)"><circle class="animate-ping" cx="0" cy="0" fill="none" opacity="0.75" r="26" stroke="#006398" stroke-width="2"></circle><circle class="fill-secondary group-hover/node:fill-primary transition-colors" cx="0" cy="0" r="11" stroke="#000000" stroke-width="3"></circle><circle cx="0" cy="0" fill="#ffffff" r="3.5"></circle><rect class="fill-primary stroke-secondary/80 shadow-md" height="22" rx="2" width="195" x="18" y="-11"></rect><text class="font-mono text-[10px] font-black fill-on-primary select-none tracking-wider" x="24" y="4">★ NAMSAN SEOUL TOWER [10.12]</text></g><g class="map-node cursor-pointer group/node pointer-events-auto" data-desc="The tidal mouth of the Han River flowing toward the Yellow Sea. The ultimate horizon point where memory disperses into the ocean." data-freq="94.20 MHz" data-id="7" data-lat="Lat 37.5850° N, Long 126.7150° E" data-name="Han River Estuary Terminal" data-track="12 The Tourist" transform="translate(80, 270)"><circle class="fill-surface-container-lowest group-hover/node:fill-secondary transition-colors" cx="0" cy="0" r="6" stroke="#000000" stroke-width="2"></circle><rect class="fill-surface-container-lowest stroke-on-surface/30 shadow-sm" height="16" rx="2" width="138" x="12" y="-8"></rect><text class="font-mono text-[9px] font-bold fill-on-surface select-none" x="16" y="4">12. HANGANG ESTUARY</text></g></svg></div></div>
-<!-- Interactive Map Instructions Sub-bar -->
-<div class="flex items-center justify-between p-space-xs font-mono text-[10px] text-on-surface-variant border-t border-outline-variant/40 mt-1">
-<div class="flex items-center gap-2">
-<span class="text-secondary font-black">● TIP:</span>
-<span class="">Click any landmark node on the map to inspect psychogeographic telemetry.</span>
-</div>
-<span class="hidden sm:inline text-outline">7 NODES GEO-TAGGED // OKC-1997</span>
-</div>
-</div>
-</div>
-<!-- Right Column: Node Telemetry & Introspection Terminal (4 cols) -->
-<div class="lg:col-span-4 flex flex-col gap-space-md">
-<!-- Active Node Telemetry Card -->
-<div class="bg-surface-container-lowest p-space-md border border-on-surface/20 shadow-sm flex flex-col gap-space-sm relative">
-<div class="flex items-center justify-between pb-space-xs border-b border-outline-variant/60">
-<div class="flex items-center gap-1 font-label-sm text-label-sm text-secondary font-black uppercase">
-<span class="material-symbols-outlined text-[16px]">sensors</span>
-<span class="">NODE TELEMETRY LOG</span>
-</div>
-<span class="font-mono text-[9px] bg-secondary-fixed/30 text-secondary px-1 border border-secondary/40 font-bold" id="nodeStatusBadge">TARGET LOCKED</span>
-</div>
-<div class="flex flex-col gap-1">
-<div class="font-label-sm text-[9px] text-outline font-mono uppercase">LANDMARK IDENTITY</div>
-<div class="text-headline-sm font-headline-sm font-extrabold text-on-surface uppercase -skew-x-2 tracking-tight glitch-text-hover" id="nodeName">
-            Jaeho 10.12 Central Station
-          </div>
-<div class="font-mono text-xs text-secondary font-bold" id="nodeTrackRef">
-            Linked to: 11. Lucky [Jaeho 10.12 Cut]
-          </div>
-</div>
-<div class="bg-surface-container-low p-space-sm border border-outline-variant/40 flex flex-col gap-1 font-mono text-[10px]">
-<div class="flex justify-between">
-<span class="text-outline">PSYCHIC COORDS:</span>
-<span class="text-on-surface font-bold" id="nodeCoords">Lat 10.12° N, Long 1997.10° E</span>
-</div>
-<div class="flex justify-between">
-<span class="text-outline">CARRIER FREQ:</span>
-<span class="text-secondary font-bold" id="nodeFrequency">101.200 MHz DEDICATION</span>
-</div>
-<div class="flex justify-between">
-<span class="text-outline">SECTOR CLASSIFICATION:</span>
-<span class="text-on-surface font-bold">ALPHA-1997-OCTOBER</span>
-</div>
-</div>
-<div class="flex flex-col gap-1">
-<div class="font-label-sm text-[9px] text-outline font-mono uppercase">INTROSPECTIVE ALBUM TELEMETRY</div>
-<div class="p-space-sm bg-surface-container border-l-2 border-secondary font-body-sm text-xs italic text-on-surface leading-relaxed" id="nodeDescription">
-            “PULL ME OUT OF THE AIRCRASH! PULL ME OUT OF THE LAKE! Cause I'm your superhero, standing on the edge. Happy Birthday Jaeho - 10.12 beacon locked.”
-          </div>
-</div>
-<div class="pt-space-xs flex flex-col gap-2">
-<button class="w-full py-2 bg-primary hover:bg-surface-container-highest hover:text-on-surface text-on-primary font-label-sm text-label-sm uppercase font-black tracking-wider transition-all border border-outline flex items-center justify-center gap-1 cursor-pointer" id="playNodeSongBtn" type="button">
-<span class="material-symbols-outlined text-[16px]">play_arrow</span>
-<span class="">PLAY MATCHING TRACK ON TERMINAL</span>
-</button>
-<button class="w-full py-1.5 bg-surface-container-low hover:bg-surface-container text-on-surface font-mono text-[10px] uppercase border border-outline-variant transition-colors cursor-pointer" id="switchBackBtnAlt" type="button">
-            [SWITCH TO AUDIO PLAYER VIEW]
-          </button>
-</div>
-</div>
-<!-- Psychogeographical Manifesto Paper Strip -->
-<div class="bg-surface-container-lowest p-space-sm border border-on-surface/20 shadow-sm flex flex-col gap-1 font-mono text-[10px] text-on-surface-variant">
-<div class="flex items-center gap-1 text-on-surface font-bold uppercase text-[9px]">
-<span class="material-symbols-outlined text-[14px] text-secondary">alt_route</span>
-<span class="">SITUATIONIST PSYCHOGEOGRAPHY NOTE</span>
-</div>
-<p class="leading-normal text-[11px] font-body-sm text-on-surface">
-          Radiohead’s OK Computer mapped the post-industrial anxiety of 1997 into sonic topography. This coordinate chart anchors the memory lines to Jaeho’s birthday marker on October 12.
-        </p>
-</div>
+<span class="">ENCODING: 1012-JH-FLAC</span>
+<span class="text-secondary font-bold">● ARCHIVE INTEGRITY 100%</span>
 </div>
 </div>
 </div>
 </div>
 <script>
   (function() {
-    // 12 tracks complete archive ledger
+    // Audio Player State Simulation
     const tracks = [
       { id: 0, title: "Airbag", artist: "Radiohead • OK Computer (1997)", duration: "04:44", totalSec: 284, special: false, tag: "AIRBAG" },
       { id: 1, title: "Paranoid Android", artist: "Radiohead • OK Computer (1997)", duration: "06:23", totalSec: 383, special: false, tag: "PARANOID ANDROID" },
-      { id: 2, title: "Subterranean Homesick Alien", artist: "Radiohead • OK Computer (1997)", duration: "04:27", totalSec: 267, special: false, tag: "SUBTERRANEAN ALIEN" },
-      { id: 3, title: "Exit Music (For a Film)", artist: "Radiohead • OK Computer (1997)", duration: "04:24", totalSec: 264, special: false, tag: "EXIT MUSIC" },
-      { id: 4, title: "Let Down", artist: "Radiohead • OK Computer (1997)", duration: "04:59", totalSec: 299, special: false, tag: "LET DOWN" },
-      { id: 5, title: "Karma Police", artist: "Radiohead • OK Computer (1997)", duration: "04:21", totalSec: 261, special: false, tag: "KARMA POLICE" },
-      { id: 6, title: "Fitter Happier", artist: "Radiohead • OK Computer (1997)", duration: "01:57", totalSec: 117, special: false, tag: "FITTER HAPPIER" },
-      { id: 7, title: "Electioneering", artist: "Radiohead • OK Computer (1997)", duration: "03:50", totalSec: 230, special: false, tag: "ELECTIONEERING" },
-      { id: 8, title: "Climbing Up the Walls", artist: "Radiohead • OK Computer (1997)", duration: "04:45", totalSec: 285, special: false, tag: "CLIMBING UP WALLS" },
-      { id: 9, title: "No Surprises", artist: "Radiohead • OK Computer (1997)", duration: "03:48", totalSec: 228, special: false, tag: "NO SURPRISES" },
-      { id: 10, title: "Lucky [Birthday Special // 10.12 Jaeho Cut]", artist: "Radiohead • OK Computer (10.12 Edition)", duration: "04:19", totalSec: 259, special: true, tag: "LUCKY // JAEHO CUT" },
-      { id: 11, title: "The Tourist", artist: "Radiohead • OK Computer (1997)", duration: "05:24", totalSec: 324, special: false, tag: "THE TOURIST" }
+      { id: 2, title: "Karma Police", artist: "Radiohead • OK Computer (1997)", duration: "04:21", totalSec: 261, special: false, tag: "KARMA POLICE" },
+      { id: 3, title: "Fitter Happier", artist: "Radiohead • OK Computer (1997)", duration: "01:57", totalSec: 117, special: false, tag: "FITTER HAPPIER" },
+      { id: 4, title: "No Surprises", artist: "Radiohead • OK Computer (1997)", duration: "03:48", totalSec: 228, special: false, tag: "NO SURPRISES" },
+      { id: 5, title: "Lucky [Birthday Special // 10.12 Jaeho Cut]", artist: "Radiohead • OK Computer (10.12 Edition)", duration: "04:19", totalSec: 259, special: true, tag: "LUCKY // JAEHO CUT" }
     ];
 
-    let currentTrackIdx = 10; // Start at special birthday track
+    let currentTrackIdx = 0;
     let isPlaying = true;
-    let elapsedSec = 2;
+    let elapsedSec = 84;
     let glitchMode = false;
     let loFiTape = false;
 
-    // View Navigation Tabs
-    const navTabAudio = document.getElementById('navTabAudio');
-    const navTabMap = document.getElementById('navTabMap');
-    const audioTerminalSection = document.getElementById('audioTerminalSection');
-    const mapOfSoulSection = document.getElementById('mapOfSoulSection');
-    const exploreMapBtn = document.getElementById('exploreMapBtn');
-    const switchBackAudioBtn = document.getElementById('switchBackAudioBtn');
-    const switchBackBtnAlt = document.getElementById('switchBackBtnAlt');
-    const viewModeBadge = document.getElementById('viewModeBadge');
-    const viewModeHeading = document.getElementById('viewModeHeading');
-    const viewModeFreq = document.getElementById('viewModeFreq');
-
-    function switchToTab(tabName) {
-      if (tabName === 'audio') {
-        audioTerminalSection.classList.remove('hidden');
-        audioTerminalSection.classList.add('flex');
-        mapOfSoulSection.classList.add('hidden');
-        mapOfSoulSection.classList.remove('flex');
-
-        navTabAudio.className = "px-2.5 sm:px-space-sm py-1 uppercase transition-all bg-primary text-on-primary font-bold shadow-brutal-sm -rotate-1 cursor-pointer flex items-center gap-1";
-        navTabMap.className = "px-2.5 sm:px-space-sm py-1 uppercase text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all border border-transparent hover:border-outline rotate-1 cursor-pointer flex items-center gap-1";
-
-        viewModeBadge.textContent = "SYSTEM // 01 AUDIO";
-        viewModeHeading.textContent = "OK COMPUTER : AUDIO TERMINAL ENGINE";
-        viewModeFreq.textContent = "[FREQ: 101.200 MHz]";
-      } else if (tabName === 'map') {
-        audioTerminalSection.classList.add('hidden');
-        audioTerminalSection.classList.remove('flex');
-        mapOfSoulSection.classList.remove('hidden');
-        mapOfSoulSection.classList.add('flex');
-
-        navTabMap.className = "px-2.5 sm:px-space-sm py-1 uppercase transition-all bg-primary text-on-primary font-bold shadow-brutal-sm -rotate-1 cursor-pointer flex items-center gap-1";
-        navTabAudio.className = "px-2.5 sm:px-space-sm py-1 uppercase text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all border border-transparent hover:border-outline rotate-1 cursor-pointer flex items-center gap-1";
-
-        viewModeBadge.textContent = "SYSTEM // 02 MAP";
-        viewModeHeading.textContent = "MAP OF THE SOUL : PSYCHOGEOGRAPHY RADAR";
-        viewModeFreq.textContent = "[GRID: 10.12° N / 1997.10° E]";
-      }
-    }
-
-    if (navTabAudio) navTabAudio.addEventListener('click', () => switchToTab('audio'));
-    if (navTabMap) navTabMap.addEventListener('click', () => switchToTab('map'));
-    if (exploreMapBtn) exploreMapBtn.addEventListener('click', () => switchToTab('map'));
-    if (switchBackAudioBtn) switchBackAudioBtn.addEventListener('click', () => switchToTab('audio'));
-    if (switchBackBtnAlt) switchBackBtnAlt.addEventListener('click', () => switchToTab('audio'));
-
-    // DOM Elements for Audio
+    // DOM Elements
     const titleEl = document.getElementById('currentTrackTitle');
     const subEl = document.getElementById('currentTrackSub');
     const idxEl = document.getElementById('currentTrackIndex');
@@ -527,10 +248,8 @@
     const nextBtn = document.getElementById('nextBtn');
     const trackRows = document.querySelectorAll('.track-row');
     const toggleGlitchBtn = document.getElementById('toggleGlitchBtn');
-    const headerGlitchToggle = document.getElementById('headerGlitchToggle');
     const glitchStatusText = document.getElementById('glitchStatusText');
     const glitchOverlay = document.getElementById('glitchOverlay');
-    const rgbSplitLayer = document.getElementById('rgbSplitLayer');
     const toggleTapeBtn = document.getElementById('toggleTapeBtn');
     const tapeStatusText = document.getElementById('tapeStatusText');
     const activeFmtEl = document.getElementById('activeFmt');
@@ -546,40 +265,37 @@
 
     function updateTrackUI() {
       const t = tracks[currentTrackIdx];
-      if (titleEl) titleEl.textContent = t.title;
-      if (subEl) subEl.textContent = t.artist;
-      const numStr = (t.id + 1 < 10 ? "0" + (t.id + 1) : "" + (t.id + 1));
-      if (idxEl) idxEl.textContent = "TRACK " + numStr + " OF 12";
-      if (labelTotalEl) labelTotalEl.textContent = t.duration;
-      if (crtTagEl) crtTagEl.textContent = "> PLAYING: [TRK_" + numStr + "] " + t.tag;
+      titleEl.textContent = t.title;
+      subEl.textContent = t.artist;
+      idxEl.textContent = "TRACK " + (t.id + 1 < 10 ? "0" + (t.id + 1) : (t.id + 1)) + " OF 06";
+      labelTotalEl.textContent = t.duration;
+      crtTagEl.textContent = "> PLAYING: [TRK_0" + (t.id + 1) + "] " + t.tag;
 
-      if (badgeEl) {
-        if (t.special) {
-          badgeEl.textContent = "// 10.12 BIRTHDAY SPECIAL";
-          badgeEl.className = "px-space-xs py-0.5 bg-secondary text-on-secondary font-label-sm text-[9px] font-black uppercase tracking-widest border border-primary animate-pulse";
-        } else {
-          badgeEl.textContent = "ORIGINAL CUT";
-          badgeEl.className = "px-space-xs py-0.5 bg-surface-container-high text-on-surface font-label-sm text-[9px] font-bold uppercase border border-outline";
-        }
+      if (t.special) {
+        badgeEl.textContent = "BIRTHDAY EDITION // 10.12";
+        badgeEl.className = "px-space-xs py-0.5 bg-secondary text-on-secondary font-label-sm text-[9px] font-bold uppercase animate-pulse";
+      } else {
+        badgeEl.textContent = "ORIGINAL CUT";
+        badgeEl.className = "px-space-xs py-0.5 bg-secondary-fixed text-on-secondary-fixed font-label-sm text-[9px] font-bold uppercase";
       }
 
       // Update rows styling
       trackRows.forEach((row, i) => {
         const ind = row.querySelector('.track-indicator');
         if (i === currentTrackIdx) {
-          row.classList.remove('bg-surface-container-low', 'bg-secondary-fixed/30', 'border-transparent');
-          row.classList.add('bg-surface-container-high', 'border-primary', 'shadow-sm');
+          row.classList.remove('bg-surface-container-low', 'bg-secondary-fixed/30');
+          row.classList.add('bg-surface-container-high', 'shadow-sm');
           if (ind) {
             ind.textContent = isPlaying ? 'volume_up' : 'pause';
             ind.classList.remove('opacity-0', 'text-outline');
             ind.classList.add('text-secondary', 'opacity-100');
           }
         } else {
-          row.classList.remove('bg-surface-container-high', 'border-primary', 'shadow-sm');
+          row.classList.remove('bg-surface-container-high', 'shadow-sm');
           if (tracks[i].special) {
-            row.classList.add('bg-secondary-fixed/30', 'border-secondary');
+            row.classList.add('bg-secondary-fixed/30');
           } else {
-            row.classList.add('bg-surface-container-low', 'border-transparent');
+            row.classList.add('bg-surface-container-low');
           }
           if (ind) {
             ind.textContent = 'play_arrow';
@@ -592,10 +308,10 @@
 
     function syncPlayback() {
       const t = tracks[currentTrackIdx];
-      if (labelElapsedEl) labelElapsedEl.textContent = formatTime(elapsedSec);
-      if (crtTimeCodeEl) crtTimeCodeEl.textContent = formatTime(elapsedSec) + " / " + t.duration;
+      labelElapsedEl.textContent = formatTime(elapsedSec);
+      crtTimeCodeEl.textContent = formatTime(elapsedSec) + " / " + t.duration;
       const pct = (elapsedSec / t.totalSec) * 100;
-      if (scrubberProgress) scrubberProgress.style.width = pct + '%';
+      scrubberProgress.style.width = pct + '%';
     }
 
     // Timer Interval
@@ -613,38 +329,32 @@
     }, 1000);
 
     // Play/Pause Action
-    if (playPauseBtn) {
-      playPauseBtn.addEventListener('click', () => {
-        isPlaying = !isPlaying;
-        if (isPlaying) {
-          playPauseIcon.textContent = 'pause';
-          playPauseText.textContent = 'PAUSE // RUN';
-        } else {
-          playPauseIcon.textContent = 'play_arrow';
-          playPauseText.textContent = 'RESUME // PLAY';
-        }
-        updateTrackUI();
-      });
-    }
+    playPauseBtn.addEventListener('click', () => {
+      isPlaying = !isPlaying;
+      if (isPlaying) {
+        playPauseIcon.textContent = 'pause';
+        playPauseText.textContent = 'PAUSE // RUN';
+      } else {
+        playPauseIcon.textContent = 'play_arrow';
+        playPauseText.textContent = 'RESUME // PLAY';
+      }
+      updateTrackUI();
+    });
 
     // Prev / Next Action
-    if (prevBtn) {
-      prevBtn.addEventListener('click', () => {
-        elapsedSec = 0;
-        currentTrackIdx = (currentTrackIdx - 1 + tracks.length) % tracks.length;
-        updateTrackUI();
-        syncPlayback();
-      });
-    }
+    prevBtn.addEventListener('click', () => {
+      elapsedSec = 0;
+      currentTrackIdx = (currentTrackIdx - 1 + tracks.length) % tracks.length;
+      updateTrackUI();
+      syncPlayback();
+    });
 
-    if (nextBtn) {
-      nextBtn.addEventListener('click', () => {
-        elapsedSec = 0;
-        currentTrackIdx = (currentTrackIdx + 1) % tracks.length;
-        updateTrackUI();
-        syncPlayback();
-      });
-    }
+    nextBtn.addEventListener('click', () => {
+      elapsedSec = 0;
+      currentTrackIdx = (currentTrackIdx + 1) % tracks.length;
+      updateTrackUI();
+      syncPlayback();
+    });
 
     // Track Manifest selection
     trackRows.forEach(row => {
@@ -670,153 +380,50 @@
     });
 
     // Scrubber click
-    if (scrubberBar) {
-      scrubberBar.addEventListener('click', (e) => {
-        const rect = scrubberBar.getBoundingClientRect();
-        const clickX = e.clientX - rect.left;
-        const pct = Math.max(0, Math.min(1, clickX / rect.width));
-        elapsedSec = Math.floor(pct * tracks[currentTrackIdx].totalSec);
-        syncPlayback();
-      });
-    }
-
-    // Volume Slider
-    if (volumeSlider) {
-      volumeSlider.addEventListener('input', (e) => {
-        volumeVal.textContent = e.target.value + '%';
-      });
-    }
-
-    function toggleGlitch() {
-      glitchMode = !glitchMode;
-      if (glitchMode) {
-        if (glitchStatusText) {
-          glitchStatusText.textContent = 'HARD-GLITCH';
-          glitchStatusText.className = 'text-error font-black animate-pulse';
-        }
-        if (glitchOverlay) {
-          glitchOverlay.className = 'absolute inset-0 pointer-events-none opacity-80 crt-scanlines bg-gradient-to-b from-error/20 via-secondary/30 to-error/30 z-20';
-        }
-        if (rgbSplitLayer) rgbSplitLayer.classList.remove('opacity-0');
-        if (crtPhoto) {
-          crtPhoto.style.filter = "contrast(180%) saturate(160%) hue-rotate(60deg) invert(10%)";
-          crtPhoto.style.animation = "rgbSplit 0.18s infinite, flickerNoise 0.5s infinite";
-        }
-        if (crtTagEl) crtTagEl.classList.add('glitch-active-anim');
-      } else {
-        if (glitchStatusText) {
-          glitchStatusText.textContent = 'NORM';
-          glitchStatusText.className = 'text-secondary font-black';
-        }
-        if (glitchOverlay) {
-          glitchOverlay.className = 'absolute inset-0 pointer-events-none opacity-30 crt-scanlines z-20';
-        }
-        if (rgbSplitLayer) rgbSplitLayer.classList.add('opacity-0');
-        if (crtPhoto) {
-          crtPhoto.style.filter = "contrast(125%)";
-          crtPhoto.style.animation = "none";
-        }
-        if (crtTagEl) crtTagEl.classList.remove('glitch-active-anim');
-      }
-    }
-
-    // Toggle Glitch Mode Button Handlers
-    if (toggleGlitchBtn) toggleGlitchBtn.addEventListener('click', toggleGlitch);
-    if (headerGlitchToggle) headerGlitchToggle.addEventListener('click', toggleGlitch);
-
-    // Toggle Tape Saturation
-    if (toggleTapeBtn) {
-      toggleTapeBtn.addEventListener('click', () => {
-        loFiTape = !loFiTape;
-        if (loFiTape) {
-          tapeStatusText.textContent = 'ON';
-          tapeStatusText.className = 'text-secondary font-black';
-          activeFmtEl.textContent = 'TAPE SATURATED // 3.75 IPS CASSETTE';
-        } else {
-          tapeStatusText.textContent = 'OFF';
-          tapeStatusText.className = 'text-outline font-black';
-          activeFmtEl.textContent = '44.1kHz // 16-BIT TAPE';
-        }
-      });
-    }
-
-    // ==========================================
-    // MAP OF THE SOUL INTERACTION SCRIPT
-    // ==========================================
-    const mapNodes = document.querySelectorAll('.map-node');
-    const nodeNameEl = document.getElementById('nodeName');
-    const nodeTrackRefEl = document.getElementById('nodeTrackRef');
-    const nodeCoordsEl = document.getElementById('nodeCoords');
-    const nodeFrequencyEl = document.getElementById('nodeFrequency');
-    const nodeDescriptionEl = document.getElementById('nodeDescription');
-    const nodeStatusBadgeEl = document.getElementById('nodeStatusBadge');
-    const playNodeSongBtn = document.getElementById('playNodeSongBtn');
-    const glitchPulseBtn = document.getElementById('glitchPulseBtn');
-    const radarCoordReadout = document.getElementById('radarCoordReadout');
-    let activeMapTrackId = 10;
-
-    mapNodes.forEach(node => {
-      node.addEventListener('click', () => {
-        const name = node.getAttribute('data-name');
-        const track = node.getAttribute('data-track');
-        const lat = node.getAttribute('data-lat');
-        const freq = node.getAttribute('data-freq');
-        const desc = node.getAttribute('data-desc');
-        const id = parseInt(node.getAttribute('data-id'), 10);
-
-        if (nodeNameEl) nodeNameEl.textContent = name;
-        if (nodeTrackRefEl) nodeTrackRefEl.textContent = "Linked to: " + track;
-        if (nodeCoordsEl) nodeCoordsEl.textContent = lat;
-        if (nodeFrequencyEl) nodeFrequencyEl.textContent = freq;
-        if (nodeDescriptionEl) nodeDescriptionEl.textContent = "“" + desc + "”";
-        if (radarCoordReadout) radarCoordReadout.textContent = lat;
-
-        // Map track title matching
-        if (track.includes('Airbag')) activeMapTrackId = 0;
-        else if (track.includes('Subterranean')) activeMapTrackId = 2;
-        else if (track.includes('Exit Music')) activeMapTrackId = 3;
-        else if (track.includes('Karma')) activeMapTrackId = 5;
-        else if (track.includes('Fitter')) activeMapTrackId = 6;
-        else if (track.includes('Lucky') || track.includes('Jaeho')) activeMapTrackId = 10;
-        else if (track.includes('Tourist')) activeMapTrackId = 11;
-
-        if (nodeStatusBadgeEl) {
-          nodeStatusBadgeEl.textContent = "TELEMETRY SYNCHRONIZED";
-          nodeStatusBadgeEl.className = "font-mono text-[9px] bg-secondary text-on-secondary px-1 border border-primary font-bold animate-pulse";
-        }
-      });
+    scrubberBar.addEventListener('click', (e) => {
+      const rect = scrubberBar.getBoundingClientRect();
+      const clickX = e.clientX - rect.left;
+      const pct = Math.max(0, Math.min(1, clickX / rect.width));
+      elapsedSec = Math.floor(pct * tracks[currentTrackIdx].totalSec);
+      syncPlayback();
     });
 
-    if (playNodeSongBtn) {
-      playNodeSongBtn.addEventListener('click', () => {
-        currentTrackIdx = activeMapTrackId;
-        elapsedSec = 0;
-        isPlaying = true;
-        if (playPauseIcon) playPauseIcon.textContent = 'pause';
-        if (playPauseText) playPauseText.textContent = 'PAUSE // RUN';
-        updateTrackUI();
-        syncPlayback();
-        switchToTab('audio');
-      });
-    }
+    // Volume Slider
+    volumeSlider.addEventListener('input', (e) => {
+      volumeVal.textContent = e.target.value + '%';
+    });
 
-    if (glitchPulseBtn) {
-      glitchPulseBtn.addEventListener('click', () => {
-        // Trigger instantaneous sector glitch
-        const svg = document.getElementById('soulMapSvg');
-        if (svg) {
-          svg.style.filter = "invert(90%) hue-rotate(180deg) contrast(200%)";
-          setTimeout(() => {
-            svg.style.filter = "none";
-          }, 350);
-        }
-        if (nodeStatusBadgeEl) {
-          nodeStatusBadgeEl.textContent = "PULSE EMISSION SENT";
-        }
-      });
-    }
+    // Toggle Glitch Mode
+    toggleGlitchBtn.addEventListener('click', () => {
+      glitchMode = !glitchMode;
+      if (glitchMode) {
+        glitchStatusText.textContent = 'ACTIVE';
+        glitchStatusText.className = 'text-error font-bold';
+        glitchOverlay.className = 'absolute inset-0 pointer-events-none opacity-60 bg-gradient-to-b from-secondary/30 via-transparent to-error/20 bg-[length:100%_2px] animate-pulse';
+        if (crtPhoto) crtPhoto.style.filter = "contrast(180%) hue-rotate(45deg) saturate(180%)";
+      } else {
+        glitchStatusText.textContent = 'NORM';
+        glitchStatusText.className = 'text-secondary';
+        glitchOverlay.className = 'absolute inset-0 pointer-events-none opacity-20 bg-gradient-to-b from-transparent via-secondary/15 to-transparent bg-[length:100%_4px]';
+        if (crtPhoto) crtPhoto.style.filter = "contrast(125%)";
+      }
+    });
 
-    // CRT Oscilloscope Canvas Animation with Deconstructed Artifacts
+    // Toggle Tape Saturation
+    toggleTapeBtn.addEventListener('click', () => {
+      loFiTape = !loFiTape;
+      if (loFiTape) {
+        tapeStatusText.textContent = 'ON';
+        tapeStatusText.className = 'text-secondary font-bold';
+        activeFmtEl.textContent = 'TAPE SATURATED // 3.75 IPS CASSETTE';
+      } else {
+        tapeStatusText.textContent = 'OFF';
+        tapeStatusText.className = 'text-outline';
+        activeFmtEl.textContent = '44.1kHz // 16-BIT TAPE';
+      }
+    });
+
+    // CRT Oscilloscope Canvas Animation
     const canvas = document.getElementById('oscilloscopeCanvas');
     const ctx = canvas ? canvas.getContext('2d') : null;
     let waveStep = 0;
@@ -847,23 +454,24 @@
       }
 
       // Draw Audio Frequency Waveform
-      ctx.lineWidth = 2.5;
-      ctx.strokeStyle = glitchMode ? "#ff5252" : "#7bd0ff";
+      ctx.lineWidth = 2;
+      ctx.strokeStyle = glitchMode ? "#ffdad6" : "#7bd0ff";
       ctx.beginPath();
 
       const numPoints = 80;
-      const amp = isPlaying ? (loFiTape ? 38 : 28) : 2;
+      const amp = isPlaying ? (loFiTape ? 36 : 28) : 2;
 
       for (let i = 0; i <= numPoints; i++) {
         const x = (i / numPoints) * w;
         const norm = (i / numPoints);
         
+        // Multi-sine simulation for realistic audio waveform
         let yOffset = Math.sin(norm * 14 + waveStep) * amp * 0.6;
         yOffset += Math.sin(norm * 28 - waveStep * 1.5) * (amp * 0.35);
         yOffset += Math.cos(norm * 45 + waveStep * 2) * (amp * 0.15);
 
-        if (glitchMode && Math.random() > 0.8) {
-          yOffset += (Math.random() - 0.5) * 55;
+        if (glitchMode && Math.random() > 0.88) {
+          yOffset += (Math.random() - 0.5) * 40;
         }
 
         const y = mid + yOffset;
@@ -875,28 +483,13 @@
       }
       ctx.stroke();
 
-      // Glitch Chromatic Separation Wave Line
-      if (glitchMode) {
-        ctx.lineWidth = 1.5;
-        ctx.strokeStyle = "#00f0ff";
-        ctx.beginPath();
-        for (let i = 0; i <= numPoints; i++) {
-          const x = (i / numPoints) * w + 3;
-          const norm = (i / numPoints);
-          let yOffset = Math.sin(norm * 14 + waveStep + 0.2) * amp * 0.6;
-          const y = mid + yOffset - 3;
-          if (i === 0) ctx.moveTo(x, y); else ctx.lineTo(x, y);
-        }
-        ctx.stroke();
-      } else {
-        // Secondary Shadow Line for CRT phosphor decay
-        ctx.lineWidth = 1;
-        ctx.strokeStyle = "rgba(0, 99, 152, 0.4)";
-        ctx.stroke();
-      }
+      // Secondary Shadow Line for CRT phosphor decay effect
+      ctx.lineWidth = 1;
+      ctx.strokeStyle = "rgba(0, 99, 152, 0.4)";
+      ctx.stroke();
 
       if (isPlaying) {
-        waveStep += loFiTape ? 0.09 : 0.055;
+        waveStep += loFiTape ? 0.08 : 0.05;
       }
 
       requestAnimationFrame(renderOscilloscope);
@@ -906,7 +499,8 @@
     updateTrackUI();
     syncPlayback();
   })();
-</script></main><footer class="w-full bg-surface-container-low py-space-lg border-t border-on-surface/20"><div class="max-w-[1280px] mx-auto px-margin lg:px-margin-desktop flex flex-col md:flex-row items-start md:items-center justify-between gap-space-md font-label-sm text-label-sm text-on-surface-variant"><div class="flex flex-col gap-space-xs"><div class="font-body-sm text-body-sm italic font-bold text-on-surface">“Fitter, happier, more productive, comfortable, not drinking too much...”</div><div class="uppercase font-label-sm text-label-sm text-outline font-mono">RADIOHEAD // OK COMPUTER TELEMETRY ARCHIVE // 1997-NOW</div></div><div class="flex flex-col md:items-end gap-space-xs font-label-sm text-label-sm"><div class="uppercase font-black text-on-surface bg-secondary-fixed/40 px-2 py-0.5 border border-secondary/40 -rotate-1">HAPPY BIRTHDAY // SYSTEM DEDICATION FOR JAEHO [10.12]</div><div class="text-outline font-mono">RADIOHEAD // OK COMPUTER TELEMETRY ARCHIVE // 1997-NOW</div></div></div></footer>
+</script></main><footer class="w-full bg-surface-container-low py-space-lg"><div class="max-w-[1280px] mx-auto px-margin lg:px-margin-desktop flex flex-col md:flex-row items-start md:items-center justify-between gap-space-md font-label-sm text-label-sm text-on-surface-variant"><div class="flex flex-col gap-space-xs"><div class="font-body-sm text-body-sm italic text-on-surface">“Fitter, happier, more productive, comfortable, not drinking too much...”</div><div class="uppercase font-label-sm text-label-sm text-outline">RADIOHEAD // OK COMPUTER TELEMETRY ARCHIVE // 1997-NOW</div></div><div class="flex flex-col md:items-end gap-space-xs font-label-sm text-label-sm"><div class="uppercase font-bold text-on-surface">HAPPY BIRTHDAY // SYSTEM DEDICATION FOR JAEHO [10.12]</div><div class="text-outline">RADIOHEAD // OK COMPUTER TELEMETRY ARCHIVE // 1997-NOW</div></div></div></footer>
+
 
 
 </body></html>
