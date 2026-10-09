@@ -1,16 +1,80 @@
-<!DOCTYPE html><html lang="en" style=""><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_standard" name="shell-type"><title>OK COMPUTER // JAEHO 10.12 // KERNEL PANIC</title><link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&amp;family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400;1,600&amp;family=Courier+Prime:ital,wght@0,400;0,700;1,400&amp;family=IBM+Plex+Mono:ital,wght@0,300;0,400;0,500;0,700;1,300&amp;family=JetBrains+Mono:wght@300;400;500;700;800&amp;family=Space+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"on-tertiary-fixed":"#001e2c","surface-container-lowest":"#ffffff","secondary-fixed-dim":"#93ccff","tertiary-container":"#001e2c","on-tertiary-container":"#008ebf","on-surface-variant":"#45464d","primary":"#000000","surface-dim":"#d9dadc","error-container":"#ffdad6","secondary":"#0055ff","on-primary-fixed-variant":"#3f465c","primary-fixed":"#dae2fd","tertiary":"#000000","on-background":"#191c1e","inverse-on-surface":"#f0f1f3","on-surface":"#191c1e","tertiary-fixed":"#c4e7ff","primary-container":"#131b2e","on-error":"#ffffff","error":"#ba1a1a","secondary-fixed":"#cce5ff","inverse-surface":"#2e3132","surface-container-highest":"#e1e2e4","on-secondary-fixed":"#001d31","outline":"#76777d","outline-variant":"#c6c6cd","on-tertiary":"#ffffff","surface-variant":"#e1e2e4","background":"#f8f9fb","on-primary":"#ffffff","on-primary-container":"#7c839b","surface":"#f8f9fb","on-error-container":"#93000a","on-secondary-fixed-variant":"#004b73","primary-fixed-dim":"#bec6e0","surface-container-high":"#e7e8ea","on-secondary":"#ffffff","on-tertiary-fixed-variant":"#004c69","tertiary-fixed-dim":"#7bd0ff","on-secondary-container":"#00476e","surface-container-low":"#f3f4f6","surface-tint":"#565e74","surface-container":"#edeef0","surface-bright":"#f8f9fb","inverse-primary":"#bec6e0","secondary-container":"#5bb8fe","klein-deep":"#001270","klein-electric":"#00188F","klein-void":"#02082b"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"space-sm":"0.5rem","space-md":"1rem","margin":"1rem","space-xl":"2.5rem","space-lg":"1.5rem","margin-desktop":"2.5rem","gutter":"1rem","space-xs":"0.25rem","gutter-desktop":"1.5rem"},"fontFamily":{"body-md":["Courier Prime"],"label-md":["JetBrains Mono"],"label-lg":["JetBrains Mono"],"label-sm":["JetBrains Mono"],"headline-xl-mobile":["Space Grotesk"],"headline-sm":["Space Grotesk"],"body-sm":["Courier Prime"],"headline-lg-mobile":["Space Grotesk"],"headline-md":["Space Grotesk"],"body-lg":["Courier Prime"],"headline-xl":["Space Grotesk"],"headline-lg":["Space Grotesk"],"editorial-serif":["Cormorant Garamond","serif"],"display-serif":["Cinzel","serif"],"code-mono":["IBM Plex Mono","monospace"]}}}};</script><style>
+<!DOCTYPE html><html lang="en" style=""><head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="web_standard" name="shell-type">
+  <title>OK COMPUTER // JAEHO 10.12 // KERNEL PANIC</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&amp;family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400;1,600&amp;family=Courier+Prime:ital,wght@0,400;0,700;1,400&amp;family=IBM+Plex+Mono:ital,wght@0,300;0,400;0,500;0,700;1,300&amp;family=JetBrains+Mono:wght@300;400;500;700;800&amp;family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Syne:wght@700;800&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "surface": "#12151a",
+            "surface-dim": "#0e1014",
+            "surface-container-lowest": "#0a0c0f",
+            "surface-container-low": "#15181f",
+            "surface-container": "#1a1e26",
+            "surface-container-high": "#222731",
+            "surface-container-highest": "#2c3340",
+            "on-surface": "#e2e8f0",
+            "on-surface-variant": "#94a3b8",
+            "outline": "#475569",
+            "outline-variant": "#334155",
+            "primary": "#ffffff",
+            "on-primary": "#000000",
+            "secondary": "#38bdf8",
+            "error": "#ef4444",
+            "error-container": "#450a0a"
+          },
+          fontFamily: {
+            "body-md": ["Courier Prime", "monospace"],
+            "code-mono": ["IBM Plex Mono", "monospace"],
+            "label-md": ["JetBrains Mono", "monospace"],
+            "headline": ["Space Grotesk", "sans-serif"],
+            "editorial-serif": ["Cormorant Garamond", "serif"],
+            "display-art": ["Syne", "sans-serif"]
+          }
+        }
+      }
+    };
+  </script>
+  <style>
     @layer base {
       html, body { margin: 0; padding: 0; }
-      body { overscroll-behavior: none; }
+      body { overscroll-behavior: none; background-color: #12151a; color: #e2e8f0; }
       ::-webkit-scrollbar { display: none; }
     }
     .scanline-overlay {
-      background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.28) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.04), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.04));
+      background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.45) 50%), linear-gradient(90deg, rgba(56, 189, 248, 0.03), rgba(0, 0, 0, 0.01), rgba(239, 68, 68, 0.03));
       background-size: 100% 3px, 6px 100%;
       pointer-events: none;
     }
-    .chromatic-text {
-      text-shadow: -1px 0 0 rgba(0, 240, 255, 0.7), 1px 0 0 rgba(255, 0, 80, 0.7);
+    .laser-scan-beam {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, rgba(56, 189, 248, 0.2), #38bdf8, rgba(255, 255, 255, 0.9), #38bdf8, rgba(56, 189, 248, 0.2), transparent);
+      box-shadow: 0 0 14px 2px rgba(56, 189, 248, 0.6);
+      animation: laserSweep 4.5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+      pointer-events: none;
+      z-index: 25;
+    }
+    @keyframes laserSweep {
+      0% { top: 0%; opacity: 0; }
+      5% { opacity: 1; }
+      92% { opacity: 0.95; }
+      100% { top: 100%; opacity: 0; }
+    }
+    .chromatic-glow {
+      text-shadow: -2px 0 0 rgba(56, 189, 248, 0.75), 2px 0 0 rgba(239, 68, 68, 0.75), 0 0 25px rgba(255, 255, 255, 0.45);
+    }
+    .tape-warning {
+      background: repeating-linear-gradient(45deg, #111, #111 8px, #ffe600 8px, #ffe600 16px);
     }
     .panic-active {
       animation: crashFlicker 0.15s infinite alternate;
@@ -21,67 +85,438 @@
       50% { transform: translate(-2px, 2px) skewX(0.8deg); opacity: 1; }
       100% { transform: translate(2px, 1px) skewX(-0.3deg); opacity: 0.98; }
     }
-    .tape-warning {
-      background: repeating-linear-gradient(45deg, #000, #000 8px, #ffe600 8px, #ffe600 16px);
-    }
+  </style>
+</head>
+<body class="bg-surface font-body-md text-on-surface antialiased selection:bg-secondary selection:text-black">
 
-    /* CRT Radar / Laser Scanning Beam Animation */
-    .scan-beam {
-      position: absolute;
-      left: 0;
-      right: 0;
-      height: 90px;
-      pointer-events: none;
-      z-index: 25;
-      background: linear-gradient(
-        180deg,
-        rgba(0, 240, 255, 0) 0%,
-        rgba(0, 210, 255, 0.08) 50%,
-        rgba(123, 208, 255, 0.35) 85%,
-        rgba(255, 255, 255, 0.85) 98%,
-        rgba(255, 255, 255, 1) 100%
-      );
-      box-shadow: 0 4px 20px -2px rgba(0, 210, 255, 0.75), 0 0 12px rgba(255, 255, 255, 0.9);
-      animation: scanBeam 4.5s ease-in-out infinite;
-    }
+  <!-- Top Dark Navigation Bar -->
+  <header class="fixed top-0 left-0 w-full z-50 bg-[#12151a]/95 backdrop-blur-md border-b border-[#222731] shadow-[0_4px_20px_rgba(0,0,0,0.5)]">
+    <div class="h-16 max-w-[1280px] mx-auto px-4 lg:px-8 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div class="flex items-center gap-2 font-label-md text-xs uppercase tracking-wider text-on-surface">
+          <span class="text-error font-bold font-code-mono animate-pulse">ERR_0x1012</span>
+          <span class="text-white font-semibold">NODE 10.12</span>
+          <span class="text-outline hidden sm:inline">//</span>
+          <span class="text-on-surface-variant hidden sm:inline font-code-mono">KERNEL_PANIC: JAEHO</span>
+        </div>
+        <div class="hidden md:inline-block px-2 py-0.5 bg-error/15 border border-error/40 text-error font-code-mono text-[10px]">
+          FAULT: 10.12_UNCAUGHT_EXP
+        </div>
+      </div>
+      <nav class="flex items-center gap-1">
+        <a class="px-3 py-1 font-label-md text-xs uppercase text-on-surface-variant hover:bg-[#1a1e26] hover:text-white transition-colors border border-transparent hover:border-[#334155]" href="index.html">[01 // AUDIO TERMINAL]</a>
+        <a aria-current="page" class="px-3 py-1 font-label-md text-xs uppercase transition-colors bg-white text-black font-bold border border-white" href="#">[02 // BIRTHDAY PORTAL: JAEHO 10.12]</a>
+      </nav>
+      <div class="flex items-center gap-3">
+        <button class="px-2.5 py-1 bg-[#1a1e26] hover:bg-[#222731] text-on-surface font-code-mono text-[10px] uppercase transition-colors hidden sm:flex items-center gap-1.5 border border-[#334155]" id="header-panic-indicator" type="button">
+          <span class="text-error font-bold">PANIC:CRITICAL</span>
+          <span class="w-1.5 h-1.5 rounded-full bg-error animate-ping"></span>
+        </button>
+        <div class="w-8 h-8 rounded-full bg-white flex items-center justify-center ring-2 ring-error/50">
+          <span class="material-symbols-outlined text-black text-[18px]">emergency</span>
+        </div>
+      </div>
+    </div>
+  </header>
 
-    @keyframes scanBeam {
-      0% {
-        top: -90px;
-        opacity: 0;
-      }
-      5% {
-        opacity: 0.85;
-      }
-      90% {
-        opacity: 0.85;
-      }
-      100% {
-        top: 100%;
-        opacity: 0;
-      }
-    }
-  </style></head><body class="bg-[#12151a] font-body-md text-body-md text-[#e1e2e4] antialiased selection:bg-secondary selection:text-white"><header class="fixed top-0 left-0 w-full z-50 bg-[#12151a]/95 backdrop-blur-md border-b border-white/10 shadow-2xl"><div class="h-16 w-full px-4 sm:px-6 lg:px-8 flex items-center justify-between"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs font-label-md text-label-md uppercase tracking-wider text-white"><span class="text-error font-bold font-code-mono animate-pulse">ERR_0x1012</span><span class="">NODE 10.12</span><span class="text-outline font-normal hidden sm:inline">//</span><span class="text-on-surface-variant hidden sm:inline font-code-mono">KERNEL_PANIC: JAEHO</span></div><div class="hidden md:inline-block px-space-xs py-0.5 bg-error/10 border border-error/30 text-error font-label-sm text-label-sm">FAULT: 10.12_UNCAUGHT_EXP</div></div><nav class="flex items-center gap-space-xs" data-active-classes="bg-primary text-on-primary font-bold"><a class="px-space-sm py-1 font-label-md text-label-md uppercase text-white/60 hover:bg-white/10 hover:text-white transition-colors border border-transparent" href="index.html">[01 // AUDIO TERMINAL]</a><a aria-current="page" class="px-space-sm py-1 font-label-md text-label-md uppercase transition-colors bg-[#20242c] text-[#7bd0ff] font-bold border border-[#7bd0ff]/40 shadow-sm" href="#">[02 // BIRTHDAY PORTAL: JAEHO 10.12]</a></nav><div class="flex items-center gap-space-sm"><button class="px-space-sm py-1 bg-[#181b20] hover:bg-[#20242c] text-white font-label-sm text-label-sm uppercase transition-colors hidden sm:flex items-center gap-space-xs border border-white/20" id="header-panic-indicator" type="button"><span class="font-code-mono text-error">PANIC:CRITICAL</span><span class="w-1.5 h-1.5 rounded-full bg-error animate-ping"></span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center ring-2 ring-error/40"><span class="material-symbols-outlined text-on-primary text-[18px]">emergency</span></div></div></div></header><main class="w-full pt-16 bg-[#12151a] min-h-[calc(100vh-80px)]" id="main-telemetry-portal"><div class="flex flex-col w-full">
-<!-- Blueprint Paper Workspace (Full Bleed Edge-to-Edge) -->
-<div class="relative w-full overflow-hidden py-0">
-<!-- Background Blueprint Register Grid & Crosshairs -->
-<div class="absolute inset-0 pointer-events-none opacity-25 [background-image:radial-gradient(#0055ff_1px,transparent_1px)] [background-size:24px_24px]"></div>
-<div class="absolute top-4 left-6 font-code-mono text-label-sm text-outline select-none pointer-events-none flex items-center gap-2"><span class="text-error font-bold">[!]</span><span class="">HEX: 0x001012_FATAL_EXCEPTION_DUMP</span></div>
-<div class="absolute top-4 right-6 font-code-mono text-label-sm text-outline select-none pointer-events-none">+ ADDR: 0x7FFF_JH1012 // RADIOHEAD_CORE</div>
-<div class="absolute bottom-6 left-6 font-code-mono text-label-sm text-outline select-none pointer-events-none">CRASH_REG // STANLEY_DONWOOD_SYS_COLLAPSE</div>
-<div class="absolute bottom-6 right-6 font-code-mono text-label-sm text-outline select-none pointer-events-none flex items-center gap-1.5"><span class="inline-block w-2 h-2 bg-error"></span><span class="">RECOVERY_IMAGE: 1997_AIRBAG_SAVED_MY_LIFE</span></div>
-<div class="w-full relative z-10 flex flex-col">
-<!-- Top Dossier Header / Xerox Slip Tape Strip with Critical Exception Accents (Full-Bleed) -->
-<section class="relative w-full bg-[#181b20] p-space-lg lg:p-space-xl border-b border-white/10"><div class="absolute -top-3 left-8 sm:left-14 flex items-center shadow-md rotate-[-1deg]"><div class="tape-warning h-4 w-6 border-y border-black"></div><span class="px-space-md py-0.5 bg-black text-[#7bd0ff] font-code-mono text-[9px] uppercase tracking-widest font-bold border-y border-white/20">[ SYSTEM_HALT // KERNEL_PANIC_10.12_OCTOBER ]</span><div class="tape-warning h-4 w-6 border-y border-black"></div></div><div class="flex flex-col lg:flex-row lg:items-end justify-between gap-space-lg px-2 sm:px-4 lg:px-6"><div class="flex flex-col gap-space-sm max-w-3xl"><div class="flex flex-wrap items-center gap-space-xs font-code-mono text-label-sm text-error tracking-widest uppercase"><span class="inline-block w-2 h-2 bg-error animate-ping"></span><span class="font-bold text-white">FATAL KERNEL TRACE:</span><span class="bg-error/20 text-[#ff8080] px-1.5 py-0.2 border border-error/40 font-bold">0x001012_EXCEPTION</span><span class="text-white/40">//</span><span class="text-[#cce5ff]">TRIBUTE RUNTIME FOR JAEHO</span><span class="text-white/40">//</span><span class="bg-black/50 text-[#7bd0ff] px-1.5 py-0.5 text-[8px] border border-white/10">SUBTERRANEAN HOMESICK TELEMETRY</span></div><div class="relative"><h1 class="font-headline-xl text-headline-xl text-white uppercase tracking-tighter leading-none select-none flex flex-wrap items-baseline gap-x-3"><span class="tracking-tight">HAPPY BIRTHDAY</span><span class="text-[#7bd0ff] font-black underline decoration-4 decoration-error underline-offset-4 tracking-tight">JAEHO</span></h1><div class="font-code-mono text-label-md text-white/70 tracking-wider mt-1.5 flex flex-wrap items-center gap-space-sm"><span class="bg-black text-[#7bd0ff] border border-[#7bd0ff]/40 px-2 py-0.5 text-[10px] font-bold">[ 10.12 // OCTOBER 12TH PROTOCOL ]</span><span class="text-[#ff8080] uppercase font-bold text-[10px] bg-error/20 px-space-xs py-0.5 border border-error/30 flex items-center gap-1"><span class="w-1.5 h-1.5 bg-error rounded-full animate-pulse"></span>CRITICAL ARCHIVE OVERRIDE ACTIVE</span><span class="text-white/40 font-normal text-[10px]">CRC32: 0x97A81012</span></div></div><div class="font-code-mono text-body-md text-white bg-[#12151a] p-space-md border-l-2 border-[#7bd0ff] shadow-sm max-w-2xl mt-space-xs relative border border-white/10"><div class="absolute top-2 right-2 text-[9px] text-[#7bd0ff]/70 font-code-mono select-none">MEM_DUMP: NO_SURPRISES_0x1012</div><p class="italic text-white/90 font-body-md leading-relaxed">“A heart that's full up like a landfill, a job that slowly kills you, bruises that won't heal... No alarms and no surprises, silent, silent. Happy Birthday Jaeho.”</p><div class="flex flex-wrap items-center gap-x-3 gap-y-1 font-code-mono text-[9px] text-white/50 mt-space-xs uppercase tracking-wider pt-2 border-t border-white/10"><span class="text-error font-bold">STACK:</span><span class="">EIP=0x1012CAFE</span><span class="">ESP=0x00F89120</span><span class="">EAX=0xJAEHO_OKC</span><span class="text-[#7bd0ff] font-semibold">STATUS: INFINITE_GRACE</span></div></div></div><div class="flex flex-row lg:flex-col items-start lg:items-end justify-between gap-space-md self-stretch lg:self-auto"><div class="px-space-md py-space-sm bg-[#20242c] shadow-md rotate-2 text-center select-none border border-white/20 relative overflow-hidden"><div class="absolute top-0 right-0 w-3 h-3 bg-error -mr-1.5 -mt-1.5 rotate-45"></div><div class="font-code-mono text-label-sm text-[#7bd0ff] uppercase font-bold tracking-widest flex items-center justify-center gap-1"><span class="material-symbols-outlined text-[11px]">verified</span><span class="">VERIFIED 10.12</span></div><div class="font-headline-sm text-headline-sm text-white tracking-tighter uppercase font-black leading-none">OK-JAEHO</div><div class="font-code-mono text-label-sm text-white/60 text-[8px] uppercase tracking-wider">STANLEY DONWOOD ARCHIVE // PASS</div></div><div class="flex flex-col items-end gap-1"><div aria-hidden="true" class="flex items-center gap-[2px] h-8 select-none"><span class="w-[3px] h-full bg-[#7bd0ff]"></span><span class="w-[1px] h-full bg-white"></span><span class="w-[4px] h-full bg-[#7bd0ff]"></span><span class="w-[2px] h-full bg-white"></span><span class="w-[1px] h-full bg-[#7bd0ff]"></span><span class="w-[3px] h-full bg-white"></span><span class="w-[5px] h-full bg-[#7bd0ff]"></span><span class="w-[1px] h-full bg-error"></span><span class="w-[2px] h-full bg-white"></span><span class="w-[4px] h-full bg-[#7bd0ff]"></span><span class="w-[1px] h-full bg-white"></span><span class="w-[3px] h-full bg-[#7bd0ff]"></span><span class="w-[6px] h-full bg-white"></span><span class="w-[2px] h-full bg-error"></span><span class="w-[1px] h-full bg-[#7bd0ff]"></span><span class="w-[4px] h-full bg-white"></span><span class="w-[2px] h-full bg-[#7bd0ff]"></span><span class="w-[1px] h-full bg-white"></span><span class="w-[5px] h-full bg-[#7bd0ff]"></span></div><div class="font-code-mono text-white/60 tracking-widest text-[9px]">9 780101 210128 // 0x1012_JH</div></div><button class="group px-space-md py-2 bg-black text-white hover:bg-error font-code-mono text-[11px] uppercase tracking-wider transition-all shadow-lg active:translate-x-0.5 active:translate-y-0.5 flex items-center gap-space-xs border border-white/20 hover:border-error" id="glitch-toggle-btn" type="button"><span class="material-symbols-outlined text-[14px] text-error group-hover:text-white transition-colors animate-spin">sync_problem</span><span class="font-bold tracking-widest">[ TRIGGER CRITICAL GLITCH / SYSTEM ERROR ]</span></button></div></div></section>
-<!-- ========================================================================= -->
-<!-- CENTERPIECE: FULL BLEED DEEP KLEIN BLUE SYSTEM PANIC & POSTER WITH LASER SCAN -->
-<!-- ========================================================================= -->
-<section class="relative w-full shadow-2xl overflow-hidden bg-black border-y-2 border-primary text-white min-h-[760px] lg:min-h-[840px] flex flex-col justify-between p-space-md lg:p-space-xl select-none" id="hypnotic-klein-stage"><div class="scan-beam" style="height: 3px; background: rgb(255, 255, 255); box-shadow: rgb(123, 208, 255) 0px 0px 8px 1px, rgba(0, 210, 255, 0.8) 0px 0px 18px 3px, rgb(255, 255, 255) 0px 0px 2px;"></div><div class="absolute inset-0 pointer-events-none overflow-hidden z-0"><img alt="OK Computer Stanley Donwood Highway Telemetry Artwork" class="w-full h-full object-cover object-center filter contrast-125 brightness-90" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDf9Iy6Cs5lec2ragDz4CMYdlOxUUS2eQoUHhvvw_RoASHAny6LY55IH3VoMxDrrCxoNCT7fGDDssczG3pFmTtclHovCBN0X8IgO8S5xx66W1iMiW2l3HDwvgP3QbMmkMjWrV9YU5YAHCiKxnjppvrF6dgo7RnCHR0MVXU85SXkj_HAz3NMc5h8mtBkWDtMuw9MfnisF3qHgVkVT-UEbuVho72HgAmFe9HVwCxUztR-AQ9k_E9dCTey"><div class="absolute inset-0 bg-gradient-to-b from-black/85 via-black/65 to-black/90 backdrop-blur-[1px]"></div></div><div class="absolute inset-0 scanline-overlay z-10 opacity-70"></div><div class="absolute inset-0 pointer-events-none opacity-20 [background-image:radial-gradient(#7bd0ff_1px,transparent_1px)] [background-size:28px_28px]"></div><div class="absolute -top-32 -left-32 w-96 h-96 bg-[#0055ff]/30 rounded-full blur-3xl pointer-events-none"></div><div class="absolute -bottom-32 -right-32 w-96 h-96 bg-[#00188F]/50 rounded-full blur-3xl pointer-events-none"></div><div class="absolute inset-0 pointer-events-none overflow-hidden flex flex-col justify-between py-12 px-6"><div class="font-display-serif text-[60px] sm:text-[100px] lg:text-[140px] font-black text-white/[0.03] uppercase tracking-tighter leading-none select-none -translate-x-6">NO SURPRISES</div><div class="font-display-serif text-[70px] sm:text-[120px] lg:text-[160px] font-black text-white/[0.035] uppercase tracking-tight text-center leading-none select-none">RADIOHEAD</div><div class="font-display-serif text-[60px] sm:text-[90px] lg:text-[130px] font-black text-white/[0.03] uppercase tracking-tighter leading-none text-right select-none translate-x-6">OK COMPUTER 1997</div></div><div class="relative z-20 flex flex-wrap items-center justify-between gap-space-sm border-b border-white/20 pb-space-sm font-code-mono text-[10px]"><div class="flex items-center gap-space-xs uppercase tracking-widest text-white/90"><span class="inline-block w-2.5 h-2.5 bg-[#7bd0ff] animate-ping"></span><span class="font-bold text-white bg-black/40 px-2 py-0.5 border border-[#7bd0ff]/40">DONWOOD HIGHWAY ARCHIVE // 1997 TELEMETRY CANVAS</span><span class="text-white/40">//</span><span class="text-[#93ccff] hidden sm:inline">EXCEPTION_VECTOR: 10.12_JAEHO_TRIBUTE</span></div><div class="flex items-center gap-2"><div class="flex items-center gap-1.5 px-2.5 py-0.5 bg-error/90 text-white font-bold tracking-wider uppercase border border-red-300/40 shadow-sm animate-pulse"><span class="material-symbols-outlined text-[13px]">dangerous</span><span class="">CRITICAL KERNEL PANIC: 0x001012</span></div><div class="hidden md:flex items-center gap-1 text-white/60 font-code-mono text-[9px] bg-black/40 px-2 py-0.5 border border-white/10"><span class="">MEM: 1012MB / OK_STATUS</span></div></div></div><div class="relative z-20 my-auto py-space-md lg:py-space-lg flex flex-col gap-space-lg"><div class="grid grid-cols-1 md:grid-cols-12 gap-space-md items-start pt-2"><div class="md:col-span-4 flex flex-col gap-2 border-l border-white/30 pl-3"><div class="font-code-mono text-[9px] uppercase tracking-widest text-[#7bd0ff] flex items-center gap-1"><span class="">[STANZA 01 // LOC: 51.4545N]</span><span class="w-1.5 h-1.5 bg-[#7bd0ff]/60 inline-block"></span></div><div class="font-code-mono text-[9px] text-white/50 uppercase tracking-widest pt-1 border-t border-white/10">TRACK 10 // NO SURPRISES // REF: 0x1012_PANIC</div></div><div class="md:col-span-4 bg-black/50 border border-[#7bd0ff]/40 p-space-sm backdrop-blur-sm relative overflow-hidden"><div class="absolute -top-1 -right-1 px-1.5 py-0.2 bg-error text-white font-code-mono text-[7px] font-bold">FAULT_TRACE</div><div class="font-code-mono text-[10px] text-[#cce5ff] uppercase tracking-wider mb-1 flex items-center gap-1"><span class="material-symbols-outlined text-[13px] text-error">terminal</span><span class="font-bold">CORE DUMP // SYSTEM DIAGNOSTIC</span></div><div class="font-code-mono text-[9px] text-white/80 leading-relaxed font-light">&gt; EXCEPTION AT 0x1012CAFE: NULL_POINTER_VOID<br>&gt; MEMORY PROTECTION FAULT IN MODULE 'NO_SURPRISES.SYS'<br>&gt; STATUS: OVERRIDE INITIATED BY JAEHO 10.12<br>&gt; PAYLOAD: BIRTHDAY PROTOCOL STABLE</div></div><div class="md:col-span-4 flex flex-col md:items-end text-left md:text-right gap-2 border-l md:border-l-0 md:border-r border-white/30 pl-3 md:pl-0 md:pr-3"><div class="font-code-mono text-[9px] uppercase tracking-widest text-[#93ccff] flex items-center md:justify-end gap-1"><span class="w-1.5 h-1.5 bg-[#93ccff]/60 inline-block"></span><span class="">[STANZA 02 // NO ALARMS BUFFER]</span></div><div class="font-code-mono text-[9px] text-white/50 uppercase tracking-widest pt-1 border-t border-white/10">TRACK 10 // NO SURPRISES // LOG: 1997-2024</div></div></div><div class="my-space-md text-center flex flex-col items-center justify-center relative py-6"><div class="absolute -top-4 left-1/2 -translate-x-1/2 font-code-mono text-[9px] uppercase tracking-[0.4em] text-[#7bd0ff]/70 flex items-center gap-3"><span class="">+ X: 1012</span><span class="w-1 h-1 bg-[#7bd0ff] rounded-full"></span><span class="">Y: 1997</span><span class="w-1 h-1 bg-[#7bd0ff] rounded-full"></span><span class="">Z: INFINITY</span></div><div class="flex flex-col items-center justify-center"><span class="font-code-mono text-[10px] tracking-[0.5em] text-[#7bd0ff] uppercase mb-1 opacity-70">— ARCHIVAL TRIBUTE SPECIFICATION —</span><h2 class="font-editorial-serif text-[42px] sm:text-[64px] lg:text-[76px] leading-tight italic text-white tracking-widest mb-1 chromatic-text font-light">Happy Birthday Jaeho</h2><div class="w-24 h-[1px] bg-gradient-to-r from-transparent via-[#7bd0ff] to-transparent my-1"></div></div><div class="max-w-2xl mx-auto mt-space-md"><p class="font-editorial-serif text-[17px] sm:text-[22px] text-white/90 italic leading-relaxed font-light">“Such a pretty house and such a pretty garden.<br>No alarms and no surprises, please.”</p><div class="mt-3 flex items-center justify-center gap-2 font-code-mono text-[10px] text-[#7bd0ff] uppercase tracking-widest"><span class="px-2.5 py-0.5 bg-black/60 border border-[#7bd0ff]/40">STANLEY DONWOOD ARTISTIC MATRIX</span><span class="">//</span><span class="px-2.5 py-0.5 bg-black/60 border border-white/20">DEDICATED TO JAEHO • 10.12</span></div></div></div><div class="grid grid-cols-1 md:grid-cols-3 gap-space-md border-t border-white/20 pt-space-md items-center text-left"><div class="flex flex-col gap-1"><div class="font-code-mono text-[9px] uppercase tracking-widest text-white/50 flex items-center gap-1.5"><span class="text-error font-bold">ERR_CODE:</span><span class="">NO_SURPRISES_0x10</span></div><div class="font-editorial-serif text-[15px] sm:text-[18px] text-white/90 italic">“A heart that's full up like a landfill...”</div></div><div class="flex flex-col items-center text-center px-2 py-1.5 bg-white/5 border border-white/10"><div class="font-code-mono text-[9px] text-[#7bd0ff] font-bold tracking-widest uppercase">RESTORATION STAMP // 10.12</div><div class="font-code-mono text-[12px] text-white font-bold tracking-tight">OKC-RECOVERY-CONFIRMED</div></div><div class="flex flex-col md:items-end text-left md:text-right gap-1"><div class="font-code-mono text-[9px] uppercase tracking-widest text-[#7bd0ff] flex items-center md:justify-end gap-1.5"><span class="">EXIT_NODE:</span><span class="text-white font-bold">NO_ALARMS_NO_SURPRISES</span></div><div class="font-editorial-serif text-[15px] sm:text-[18px] text-white/90 italic">“Silent, silent... no alarms and no surprises, please.”</div></div></div></div><div class="relative z-20 pt-space-md border-t border-white/20 flex flex-col lg:flex-row items-stretch lg:items-center justify-between gap-space-md"><div class="font-code-mono text-[11px] text-white/80 uppercase tracking-wider flex items-center gap-2"><span class="material-symbols-outlined text-[16px] text-error animate-pulse">crisis_alert</span><span class="">EXECUTION STATE:</span><span class="px-2 py-0.5 bg-error text-white font-bold text-[9px]">KERNEL_PANIC: RESOLVED_TRIBUTE</span><span class="text-white/40 hidden sm:inline">//</span><span class="text-[#7bd0ff] hidden sm:inline">DESTINATION NODES ARMED</span></div><div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-space-sm"><a class="group relative px-4 py-2.5 bg-black/80 text-white border-2 border-white/70 hover:border-[#7bd0ff] hover:bg-[#7bd0ff] hover:text-black font-code-mono text-[11px] uppercase tracking-wider transition-all shadow-xl flex items-center justify-center gap-2 font-bold active:translate-x-0.5 active:translate-y-0.5" href="index.html"><span class="material-symbols-outlined text-[15px] transition-transform group-hover:-translate-x-1">arrow_back</span><span class="w-2 h-2 rounded-full bg-error group-hover:bg-black transition-colors animate-ping"></span><span class="">[ ← RETURN TO AUDIO TERMINAL // 01 ]</span></a></div></div></section>
-<!-- Bottom Telemetry Ledger & Birthday Dispatch (Full Bleed Edge-to-Edge) -->
-<section class="w-full bg-[#181b20] p-space-md lg:p-space-lg shadow-lg border-b border-white/10"><div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-space-md px-2 sm:px-4 lg:px-6"><div class="flex items-center gap-space-md"><div class="w-10 h-10 bg-error/20 border border-error/40 flex items-center justify-center"><span class="material-symbols-outlined text-error text-[22px]">bug_report</span></div><div class="flex flex-col"><span class="font-code-mono text-label-sm uppercase text-error font-bold">CRITICAL EXCEPTION TELEMETRY // RESOLVED</span><span class="font-headline-sm text-headline-sm text-white uppercase font-black tracking-tight">ALL SUBSYSTEMS NOMINAL FOR JAEHO’S CELEBRATION</span></div></div><div class="flex flex-wrap items-center gap-space-sm font-code-mono text-label-sm text-label-sm"><div class="flex items-center gap-1.5 px-space-xs py-1 bg-[#12151a] text-white border border-white/10"><span class="w-2.5 h-2.5 bg-[#7bd0ff] flex items-center justify-center text-black text-[8px] font-bold">✓</span><span class="">AUDIO BUFFER</span></div><div class="flex items-center gap-1.5 px-space-xs py-1 bg-[#12151a] text-white border border-white/10"><span class="w-2.5 h-2.5 bg-[#7bd0ff] flex items-center justify-center text-black text-[8px] font-bold">✓</span><span class="">GUITAR LOG</span></div><div class="flex items-center gap-1.5 px-space-xs py-1 bg-[#12151a] text-white border border-error/40"><span class="w-2.5 h-2.5 bg-error flex items-center justify-center text-white text-[8px] font-bold">✓</span><span class="font-bold text-[#ff8080]">10.12 KERNEL ACTIVE</span></div></div></div></section>
+  <main class="w-full pt-16 bg-[#12151a] min-h-[calc(100vh-80px)]" id="main-telemetry-portal">
+    <div class="flex flex-col w-full">
+
+      <!-- Dark Blueprint Paper Workspace -->
+      <div class="relative w-full overflow-hidden px-4 lg:px-8 py-6 lg:py-8">
+        <!-- Background Dark Register Grid & Crosshairs -->
+        <div class="absolute inset-0 pointer-events-none opacity-20 [background-image:radial-gradient(#38bdf8_1px,transparent_1px)] [background-size:28px_28px]"></div>
+        <div class="absolute top-4 left-6 font-code-mono text-[10px] text-outline select-none pointer-events-none flex items-center gap-2">
+          <span class="text-error font-bold">[!]</span>
+          <span class="">HEX: 0x001012_FATAL_EXCEPTION_DUMP</span>
+        </div>
+        <div class="absolute top-4 right-6 font-code-mono text-[10px] text-outline select-none pointer-events-none">+ ADDR: 0x7FFF_JH1012 // RADIOHEAD_CORE</div>
+        <div class="absolute bottom-6 left-6 font-code-mono text-[10px] text-outline select-none pointer-events-none">CRASH_REG // STANLEY_DONWOOD_SYS_COLLAPSE</div>
+        <div class="absolute bottom-6 right-6 font-code-mono text-[10px] text-outline select-none pointer-events-none flex items-center gap-1.5">
+          <span class="inline-block w-2 h-2 bg-error"></span>
+          <span class="">RECOVERY_IMAGE: 1997_AIRBAG_SAVED_MY_LIFE</span>
+        </div>
+
+        <div class="max-w-[1280px] mx-auto w-full relative z-10 flex flex-col gap-6">
+
+          <!-- Top Dossier Header / Xerox Slip Tape Strip with Dark Charcoal Container -->
+          <section class="relative bg-[#181c23] p-6 lg:p-8 shadow-2xl border border-[#2a303d] rounded-sm">
+            <!-- Masking Tape Header Accent with Caution Bar -->
+            <div class="absolute -top-3 left-8 sm:left-14 flex items-center shadow-lg rotate-[-1deg]">
+              <div class="tape-warning h-4 w-6 border-y border-black"></div>
+              <span class="px-3 py-0.5 bg-black text-white font-code-mono text-[9px] uppercase tracking-widest font-bold">[ SYSTEM_HALT // KERNEL_PANIC_10.12_OCTOBER ]</span>
+              <div class="tape-warning h-4 w-6 border-y border-black"></div>
+            </div>
+
+            <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6">
+              <div class="flex flex-col gap-3 max-w-3xl">
+                <!-- Telemetry Indicator Line -->
+                <div class="flex flex-wrap items-center gap-2 font-code-mono text-[11px] text-error tracking-widest uppercase">
+                  <span class="inline-block w-2 h-2 bg-error animate-ping"></span>
+                  <span class="font-bold text-white">FATAL KERNEL TRACE:</span>
+                  <span class="bg-error/20 text-red-400 px-1.5 py-0.5 border border-error/40 font-bold">0x001012_EXCEPTION</span>
+                  <span class="text-outline">//</span>
+                  <span class="text-on-surface-variant">TRIBUTE RUNTIME FOR JAEHO</span>
+                  <span class="text-outline">//</span>
+                  <span class="bg-[#222731] text-sky-400 px-1.5 py-0.5 text-[9px] border border-[#334155]">SUBTERRANEAN HOMESICK TELEMETRY</span>
+                </div>
+
+                <!-- Big Impact Header Metadata -->
+                <div class="relative">
+                  <h2 class="font-headline text-3xl sm:text-4xl text-white uppercase tracking-tight font-extrabold flex flex-wrap items-baseline gap-x-3">
+                    <span class="">OCTOBER 12 // PROTOCOL</span>
+                    <span class="text-secondary font-black underline decoration-4 decoration-error underline-offset-4 tracking-tight">[ JAEHO ]</span>
+                  </h2>
+                  <div class="font-code-mono text-xs text-on-surface-variant tracking-wider mt-1.5 flex flex-wrap items-center gap-2">
+                    <span class="bg-white text-black px-2 py-0.5 text-[10px] font-bold">[ 10.12 // BIRTHDAY PROTOCOL ]</span>
+                    <span class="text-error uppercase font-bold text-[10px] bg-error-container/60 px-2 py-0.5 border border-error/40 flex items-center gap-1">
+                      <span class="w-1.5 h-1.5 bg-error rounded-full animate-pulse"></span>
+                      CRITICAL ARCHIVE OVERRIDE ACTIVE
+                    </span>
+                    <span class="text-outline font-normal text-[10px]">CRC32: 0x97A81012</span>
+                  </div>
+                </div>
+
+                <!-- Lyric Fragment / Xerox Typewriter Manifest with Hex Error Log Dump -->
+                <div class="font-code-mono text-xs text-on-surface bg-[#12151b] p-3.5 border-l-2 border-secondary shadow-inner max-w-2xl mt-1 relative border border-[#232936]">
+                  <div class="absolute top-2 right-2 text-[9px] text-outline font-code-mono select-none">MEM_DUMP: STACK_FRAME_0</div>
+                  <p class="italic text-slate-300 leading-relaxed font-normal">
+                    “A heart that’s full up like a landfill, a job that slowly kills you, bruises that won’t heal. No alarms and no surprises, silent silent. Happy Birthday Jaeho.”
+                  </p>
+                  <div class="flex flex-wrap items-center gap-x-3 gap-y-1 font-code-mono text-[9px] text-outline mt-2 uppercase tracking-wider pt-2 border-t border-[#232936]">
+                    <span class="text-error font-bold">STACK:</span>
+                    <span class="">EIP=0x1012CAFE</span>
+                    <span class="">ESP=0x00F89120</span>
+                    <span class="">EAX=0xJAEHO_OKC</span>
+                    <span class="text-secondary font-semibold">STATUS: INFINITE_GRACE</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Mechanical Stamp & Barcode Block & Critical Glitch Trigger -->
+              <div class="flex flex-row lg:flex-col items-start lg:items-end justify-between gap-4 self-stretch lg:self-auto">
+                <!-- VERIFIED STAMP -->
+                <div class="px-4 py-2 bg-[#222731] shadow-md rotate-2 text-center select-none border border-[#3b4354] relative overflow-hidden">
+                  <div class="absolute top-0 right-0 w-3 h-3 bg-error -mr-1.5 -mt-1.5 rotate-45"></div>
+                  <div class="font-code-mono text-[10px] text-error uppercase font-bold tracking-widest flex items-center justify-center gap-1">
+                    <span class="material-symbols-outlined text-[12px]">verified</span>
+                    <span class="">VERIFIED 10.12</span>
+                  </div>
+                  <div class="font-headline text-lg text-white tracking-tighter uppercase font-black leading-none">OK-JAEHO</div>
+                  <div class="font-code-mono text-[8px] text-slate-400 uppercase tracking-wider">STANLEY DONWOOD ARCHIVE // PASS</div>
+                </div>
+
+                <!-- Faux Barcode Visualization with Hex Telemetry -->
+                <div class="flex flex-col items-end gap-1">
+                  <div aria-hidden="true" class="flex items-center gap-[2px] h-7 select-none">
+                    <span class="w-[3px] h-full bg-white"></span>
+                    <span class="w-[1px] h-full bg-white"></span>
+                    <span class="w-[4px] h-full bg-white"></span>
+                    <span class="w-[2px] h-full bg-white"></span>
+                    <span class="w-[1px] h-full bg-white"></span>
+                    <span class="w-[3px] h-full bg-white"></span>
+                    <span class="w-[5px] h-full bg-white"></span>
+                    <span class="w-[1px] h-full bg-error"></span>
+                    <span class="w-[2px] h-full bg-white"></span>
+                    <span class="w-[4px] h-full bg-white"></span>
+                    <span class="w-[1px] h-full bg-white"></span>
+                    <span class="w-[3px] h-full bg-white"></span>
+                    <span class="w-[6px] h-full bg-white"></span>
+                    <span class="w-[2px] h-full bg-error"></span>
+                    <span class="w-[1px] h-full bg-white"></span>
+                    <span class="w-[4px] h-full bg-white"></span>
+                    <span class="w-[2px] h-full bg-white"></span>
+                    <span class="w-[1px] h-full bg-white"></span>
+                    <span class="w-[5px] h-full bg-white"></span>
+                  </div>
+                  <div class="font-code-mono text-slate-400 tracking-widest text-[9px]">9 780101 210128 // 0x1012_JH</div>
+                </div>
+
+                <!-- GLITCH CONTROLLER BUTTON -->
+                <button class="group px-4 py-2 bg-black text-white hover:bg-error font-code-mono text-[11px] uppercase tracking-wider transition-all shadow-xl active:translate-x-0.5 active:translate-y-0.5 flex items-center gap-2 border border-[#3b4354] hover:border-error" id="glitch-toggle-btn" type="button">
+                  <span class="material-symbols-outlined text-[14px] text-error group-hover:text-white transition-colors animate-spin">sync_problem</span>
+                  <span class="font-bold tracking-widest">[ TRIGGER CRITICAL GLITCH / SYSTEM ERROR ]</span>
+                </button>
+              </div>
+            </div>
+          </section>
+
+          <!-- ========================================================================= -->
+          <!-- CENTERPIECE: DEEP DARK CHARCOAL HIGHWAY POSTER WITH ULTRA IMPACT TYPOGRAPHY -->
+          <!-- ========================================================================= -->
+          <section class="relative w-full rounded shadow-2xl overflow-hidden bg-[#101318] border-2 border-[#2b3342] text-white min-h-[760px] lg:min-h-[840px] flex flex-col justify-between p-6 lg:p-10 select-none" id="hypnotic-klein-stage">
+            
+            <!-- Highway Artwork Layer -->
+            <div class="absolute inset-0 pointer-events-none overflow-hidden z-0">
+              <img alt="OK Computer Stanley Donwood Highway Telemetry Artwork" class="w-full h-full object-cover object-center filter contrast-125 brightness-75 saturate-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDf9Iy6Cs5lec2ragDz4CMYdlOxUUS2eQoUHhvvw_RoASHAny6LY55IH3VoMxDrrCxoNCT7fGDDssczG3pFmTtclHovCBN0X8IgO8S5xx66W1iMiW2l3HDwvgP3QbMmkMjWrV9YU5YAHCiKxnjppvrF6dgo7RnCHR0MVXU85SXkj_HAz3NMc5h8mtBkWDtMuw9MfnisF3qHgVkVT-UEbuVho72HgAmFe9HVwCxUztR-AQ9k_E9dCTey">
+              <div class="absolute inset-0 bg-gradient-to-b from-[#101318]/90 via-[#101318]/70 to-[#101318]/95 backdrop-blur-[0.5px]"></div>
+            </div>
+
+            <!-- Ultra-Fine Dynamic CRT Laser Scan Beam -->
+            <div class="laser-scan-beam"></div>
+
+            <!-- Chromatic CRT & Scanline Mesh Texture Layer -->
+            <div class="absolute inset-0 scanline-overlay z-10 opacity-75"></div>
+
+            <!-- Deep Blueprint Radial Vignette -->
+            <div class="absolute -top-32 -left-32 w-96 h-96 bg-sky-500/15 rounded-full blur-3xl pointer-events-none"></div>
+            <div class="absolute -bottom-32 -right-32 w-96 h-96 bg-red-500/15 rounded-full blur-3xl pointer-events-none"></div>
+
+            <!-- Background Ghost Typographic Watermarks -->
+            <div class="absolute inset-0 pointer-events-none overflow-hidden flex flex-col justify-between py-12 px-6">
+              <div class="font-headline text-[60px] sm:text-[100px] lg:text-[130px] font-black text-white/[0.025] uppercase tracking-tighter leading-none select-none -translate-x-6">
+                PARANOID ANDROID
+              </div>
+              <div class="font-headline text-[70px] sm:text-[120px] lg:text-[150px] font-black text-white/[0.03] uppercase tracking-tight text-center leading-none select-none">
+                RADIOHEAD
+              </div>
+              <div class="font-headline text-[60px] sm:text-[90px] lg:text-[120px] font-black text-white/[0.025] uppercase tracking-tighter leading-none text-right select-none translate-x-6">
+                OK COMPUTER 1997
+              </div>
+            </div>
+
+            <!-- ================= TOP CLINICAL TELEMETRY STRIP & SYSTEM ERROR BADGE ================= -->
+            <div class="relative z-20 flex flex-wrap items-center justify-between gap-3 border-b border-white/15 pb-3 font-code-mono text-[10px]">
+              <div class="flex items-center gap-2 uppercase tracking-widest text-slate-300">
+                <span class="inline-block w-2.5 h-2.5 bg-secondary animate-ping"></span>
+                <span class="font-bold text-white bg-black/60 px-2 py-0.5 border border-secondary/40">DONWOOD HIGHWAY ARCHIVE // 1997 TELEMETRY CANVAS</span>
+                <span class="text-white/30">//</span>
+                <span class="text-sky-300 hidden sm:inline">EXCEPTION_VECTOR: 10.12_JAEHO_TRIBUTE</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <div class="flex items-center gap-1.5 px-2.5 py-0.5 bg-error/90 text-white font-bold tracking-wider uppercase border border-red-400/50 shadow-sm animate-pulse">
+                  <span class="material-symbols-outlined text-[13px]">dangerous</span>
+                  <span class="">CRITICAL KERNEL PANIC: 0x001012</span>
+                </div>
+                <div class="hidden md:flex items-center gap-1 text-slate-400 font-code-mono text-[9px] bg-black/60 px-2 py-0.5 border border-white/10">
+                  <span class="">MEM: 1012MB / OK_STATUS</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- ================= ARCHITECTURAL EDITORIAL LYRIC MATRIX ================= -->
+            <div class="relative z-20 my-auto py-6 lg:py-8 flex flex-col gap-6">
+
+              <!-- ROW 1: Staggered Architectural Lyric Columns with Coordinate Markers -->
+              <div class="grid grid-cols-1 md:grid-cols-12 gap-5 items-start pt-2">
+  <!-- Column Left (4 cols): Serenade Stanza with Left Offset & Skewed Border -->
+  <div class="md:col-span-4 flex flex-col gap-2 border-l-2 border-dashed border-sky-400/40 pl-3 md:-translate-y-2 rotate-[-1deg] bg-black/30 p-2.5">
+    <div class="font-code-mono text-[9px] uppercase tracking-widest text-sky-300 flex items-center gap-1.5">
+      <span class="px-1 bg-sky-500/20 text-sky-300 border border-sky-400/30 font-bold">[STANZA 01 // LOC: 51.4545N]</span>
+      <span class="w-1.5 h-1.5 bg-sky-400/70 inline-block"></span>
+    </div>
+    <div class="font-code-mono text-[9px] text-slate-400 uppercase tracking-widest pt-1 border-t border-white/10 flex items-center justify-between">
+      <span class="">TRACK 02 // PARANOID ANDROID</span>
+      <span class="text-error font-bold">[OFFSET_L]</span>
+    </div>
+  </div>
+
+  <!-- Column Center (4 cols): Displaced Diagnostic Box (Shifted downward & angled) -->
+  <div class="md:col-span-5 bg-black/80 border border-secondary/40 p-3.5 backdrop-blur-md relative overflow-hidden md:translate-y-4 md:translate-x-2 rotate-[1deg] shadow-xl">
+    <div class="absolute -top-1 -right-1 px-1.5 py-0.2 bg-error text-white font-code-mono text-[7px] font-bold">FAULT_TRACE</div>
+    <div class="font-code-mono text-[10px] text-sky-200 uppercase tracking-wider mb-1 flex items-center gap-1.5">
+      <span class="material-symbols-outlined text-[13px] text-error">terminal</span>
+      <span class="font-bold">CORE DUMP // SYSTEM DIAGNOSTIC</span>
+      <span class="text-[8px] text-outline ml-auto">ERR:0x1012</span>
+    </div>
+    <div class="font-code-mono text-[9px] text-slate-300 leading-relaxed font-light">
+      &gt; EXCEPTION AT 0x1012CAFE: NULL_POINTER_VOID<br>
+      &gt; MEMORY PROTECTION FAULT IN MODULE 'AIRBAG.SYS'<br>
+      &gt; STATUS: OVERRIDE INITIATED BY JAEHO 10.12<br>
+      &gt; PAYLOAD: BIRTHDAY PROTOCOL STABLE
+    </div>
+    <div class="mt-2 pt-1.5 border-t border-white/10 flex items-center justify-between text-[8px] font-code-mono text-outline">
+      <span class="">REGISTER: NON_LINEAR_ALIGNMENT</span>
+      <span class="text-sky-300">DONWOOD_GRID: BROKEN</span>
+    </div>
+  </div>
+
+  <!-- Column Right (3 cols): Secondary Stanza with Right Push & Broken Rule -->
+  <div class="md:col-span-3 flex flex-col md:items-end text-left md:text-right gap-2 border-l md:border-l-0 md:border-r-2 border-dashed border-error/50 pl-3 md:pl-0 md:pr-3 md:-translate-y-3 rotate-[-0.5deg]">
+    <div class="font-code-mono text-[9px] uppercase tracking-widest text-sky-300 flex items-center md:justify-end gap-1">
+      <span class="w-1.5 h-1.5 bg-error inline-block"></span>
+      <span class="">[STANZA 02 // NO SURPRISES BUFFER]</span>
+    </div>
+    <div class="font-code-mono text-[9px] text-slate-400 uppercase tracking-widest pt-1 border-t border-white/10">
+      TRACK 10 // NO SURPRISES // LOG: 1997-NOW
+    </div>
+  </div>
 </div>
+
+              <!-- ============================================================== -->
+              <!-- ROW 2: PRIMARY MONUMENTAL FOCAL LYRIC: REDESIGNED & ENLARGED -->
+              <!-- ============================================================== -->
+              <div class="my-6 text-center flex flex-col items-center justify-center relative py-6"><!-- Subtle Deconstructed Crosshair Overlay Coordinates -->
+<div class="absolute -top-3 left-1/3 -translate-x-12 font-code-mono text-[10px] uppercase tracking-[0.35em] text-white/70 flex items-center gap-3 select-none rotate-[-1deg]">
+  <span class="text-sky-300 font-bold">+ X: 1012.04</span>
+  <span class="w-1 h-1 bg-sky-400 rounded-full animate-ping"></span>
+  <span class="text-white/60 font-mono">Y: 1997.89</span>
+  <span class="text-error font-bold">[ERR_DISPLACEMENT: +4px]</span>
+  <span class="text-white/40 font-bold">Z: ∞</span>
 </div>
-<script>
+
+<!-- Asymmetric / Deconstructed Monumental Title -->
+<div class="mt-4 mb-3 flex flex-col items-start md:items-center w-full px-2 sm:px-6">
+  <!-- Line 1: HAPPY BIRTHDAY shifted slightly left with subtle rotated tape fragment -->
+  <div class="relative self-start md:self-center -translate-x-2 md:-translate-x-8 rotate-[-1deg] mb-1">
+    <span class="absolute -top-2.5 -left-4 px-1.5 py-0.2 bg-black text-sky-300 border border-sky-400/40 text-[8px] font-code-mono tracking-widest uppercase">DECONSTRUCT // 01</span>
+    <h1 class="font-headline text-4xl sm:text-6xl lg:text-7xl font-black uppercase text-slate-100 leading-none select-none tracking-wider" style="font-family: 'Syne', 'Space Grotesk', sans-serif; letter-spacing: 0.08em; text-shadow: 0 1px 3px rgba(0,0,0,0.9), 0 0 12px rgba(255,255,255,0.25);">
+      HAPPY BIRTHDAY
+    </h1>
+  </div>
+
+  <!-- Line 2: JAEHO shifted right with staggered alignment and refined restrained tone -->
+  <div class="relative self-end md:self-center translate-x-3 md:translate-x-12 rotate-[1.5deg] mt-1">
+    <div class="flex items-center gap-3">
+      <div class="h-[2px] w-8 sm:w-16 bg-error/70 hidden sm:block"></div>
+      <span class="font-headline text-4xl sm:text-6xl lg:text-7xl font-black uppercase text-white leading-none select-none tracking-widest border-b-2 border-dashed border-sky-400/50 pb-1" style="font-family: 'Syne', 'Space Grotesk', sans-serif; letter-spacing: 0.16em; text-shadow: 0 1px 4px rgba(0,0,0,0.9), 0 0 14px rgba(255,255,255,0.3);">
+        JAEHO
+      </span>
+      <span class="text-error text-xs font-code-mono font-bold tracking-widest border border-error/50 px-1 py-0.5 bg-black/80 -rotate-6">10.12</span>
+    </div>
+  </div>
+
+  <div class="font-code-mono text-xs sm:text-sm text-slate-300 tracking-[0.25em] uppercase mt-5 font-medium flex items-center gap-2 self-center rotate-[-0.5deg]">
+    <span class="text-error font-bold">[</span>
+    <span class="text-sky-300">10.12</span>
+    <span class="text-white/40">//</span>
+    <span class="">PARANOID ANDROID : RAIN DOWN PROTOCOL</span>
+    <span class="text-error font-bold">]</span>
+  </div>
+</div>
+
+<!-- Architectural Sub-Stanza / Offset Poetic Fragment -->
+<div class="max-w-2xl mx-auto mt-4 text-left md:text-center -translate-x-1 sm:translate-x-3 rotate-[0.5deg]">
+  <p class="font-editorial-serif text-lg sm:text-xl text-slate-200 italic leading-relaxed font-light" style="letter-spacing: 0.03em; text-shadow: 0 1px 2px rgba(0,0,0,0.8);">
+    “Rain down, rain down, come on, rain down on me<br>
+    <span class="inline-block translate-x-4 text-slate-300">From a great height, from a great height...”</span>
+  </p>
+  <div class="mt-3 flex flex-wrap items-center justify-start md:justify-center gap-2 font-code-mono text-[10px] text-slate-300 uppercase tracking-widest">
+    <span class="px-2.5 py-1 bg-black/80 border border-white/20 text-slate-200 rotate-[-1deg]">TRACK 02 // PARANOID ANDROID: RAIN DOWN BUFFER</span>
+    <span class="text-white/30 font-bold">//</span>
+    <span class="px-2.5 py-1 bg-[#15181f] border border-sky-400/40 text-sky-200 rotate-[1deg]">DEDICATED TO JAEHO • 10.12</span>
+  </div>
+</div></div>
+
+              <!-- ROW 3: Secondary Editorial Columns & Telemetry Stamp Grid -->
+              <div class="grid grid-cols-1 md:grid-cols-12 gap-4 border-t border-white/15 pt-4 items-center text-left">
+  <!-- Left Quote: shifted slightly down -->
+  <div class="md:col-span-4 flex flex-col gap-1 md:translate-y-1 rotate-[-0.5deg]">
+    <div class="font-code-mono text-[9px] uppercase tracking-widest text-slate-400 flex items-center gap-1.5">
+      <span class="text-error font-bold">ERR_CODE:</span>
+      <span class="">PARANOID_0x02</span>
+      <span class="text-outline text-[8px]">// ASYMMETRIC</span>
+    </div>
+    <div class="font-editorial-serif text-base sm:text-lg text-slate-300 italic">
+      “One day I am gonna grow wings, a chemical reaction.”
+    </div>
+  </div>
+
+  <!-- Center Stamp: Offset, rotated, and shifted to column 5-8 with brutalist styling -->
+  <div class="md:col-span-4 flex flex-col items-center text-center px-4 py-2 bg-black/70 border border-white/20 rotate-[1.5deg] shadow-lg md:-translate-y-2">
+    <div class="font-code-mono text-[9px] text-sky-300 font-bold tracking-widest uppercase flex items-center gap-1">
+      <span class="w-1.5 h-1.5 bg-sky-400"></span>
+      RESTORATION STAMP // 10.12
+    </div>
+    <div class="font-code-mono text-[13px] text-white font-bold tracking-tight">
+      OKC-RECOVERY-CONFIRMED
+    </div>
+    <div class="font-code-mono text-[8px] text-outline mt-0.5 tracking-widest">
+      DONWOOD-CANVAS // DRIFT: 1.5°
+    </div>
+  </div>
+
+  <!-- Right Quote: shifted up and right-aligned with staggered margin -->
+  <div class="md:col-span-4 flex flex-col md:items-end text-left md:text-right gap-1 md:translate-x-1 rotate-[-1deg]">
+    <div class="font-code-mono text-[9px] uppercase tracking-widest text-sky-300 flex items-center md:justify-end gap-1.5">
+      <span class="">EXIT_NODE:</span>
+      <span class="text-white font-bold">AIRBAG_LIFESAVER</span>
+    </div>
+    <div class="font-editorial-serif text-base sm:text-lg text-slate-300 italic">
+      “In a deep deep sleep, of the innocent, completely in control.”
+    </div>
+  </div>
+</div>
+
+            </div>
+
+            <!-- ================= BOTTOM REFINED SYSTEM ERROR INTERACTIVE CONTROLS ================= -->
+            <div class="relative z-20 pt-4 border-t border-white/15 flex flex-col lg:flex-row items-stretch lg:items-center justify-between gap-4">
+              <!-- Left: Terminal Panic Status Indicator -->
+              <div class="font-code-mono text-[11px] text-slate-300 uppercase tracking-wider flex items-center gap-2">
+                <span class="material-symbols-outlined text-[16px] text-error animate-pulse">crisis_alert</span>
+                <span class="">EXECUTION STATE:</span>
+                <span class="px-2 py-0.5 bg-error text-white font-bold text-[9px]">KERNEL_PANIC: RESOLVED_TRIBUTE</span>
+                <span class="text-white/40 hidden sm:inline">//</span>
+                <span class="text-sky-300 hidden sm:inline">DESTINATION NODES ARMED</span>
+              </div>
+              <!-- Right: Sleek Brutalist System Error Action Buttons -->
+              <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-2">
+                <a class="group relative px-5 py-2.5 bg-black/90 text-white border-2 border-white/80 hover:border-sky-400 hover:bg-sky-400 hover:text-black font-code-mono text-xs uppercase tracking-wider transition-all shadow-xl flex items-center justify-center gap-2 font-bold active:translate-x-0.5 active:translate-y-0.5" href="index.html">
+                  <span class="material-symbols-outlined text-[16px] transition-transform group-hover:-translate-x-1">arrow_back</span>
+                  <span class="w-2 h-2 rounded-full bg-error group-hover:bg-black transition-colors animate-ping"></span>
+                  <span class="">[ ← RETURN TO AUDIO TERMINAL // 01 ]</span>
+                </a>
+              </div>
+            </div>
+
+          </section>
+
+          <!-- Bottom Telemetry Ledger & Birthday Dispatch -->
+          <section class="bg-[#181c23] p-5 lg:p-6 shadow-2xl border border-[#2a303d] rounded-sm">
+            <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+              <div class="flex items-center gap-4">
+                <div class="w-10 h-10 bg-error/15 border border-error/40 flex items-center justify-center">
+                  <span class="material-symbols-outlined text-error text-[22px]">bug_report</span>
+                </div>
+                <div class="flex flex-col">
+                  <span class="font-code-mono text-[10px] uppercase text-error font-bold">CRITICAL EXCEPTION TELEMETRY // RESOLVED</span>
+                  <span class="font-headline text-base text-white uppercase font-extrabold tracking-tight">
+                    ALL SUBSYSTEMS NOMINAL FOR JAEHO’S CELEBRATION
+                  </span>
+                </div>
+              </div>
+              <div class="flex flex-wrap items-center gap-2 font-code-mono text-[10px]">
+                <div class="flex items-center gap-1.5 px-2.5 py-1 bg-[#12151b] text-slate-300 border border-[#2a303d]">
+                  <span class="w-2.5 h-2.5 bg-secondary flex items-center justify-center text-black text-[8px] font-bold">✓</span>
+                  <span class="">AUDIO BUFFER</span>
+                </div>
+                <div class="flex items-center gap-1.5 px-2.5 py-1 bg-[#12151b] text-slate-300 border border-[#2a303d]">
+                  <span class="w-2.5 h-2.5 bg-secondary flex items-center justify-center text-black text-[8px] font-bold">✓</span>
+                  <span class="">GUITAR LOG</span>
+                </div>
+                <div class="flex items-center gap-1.5 px-2.5 py-1 bg-[#12151b] text-slate-300 border border-[#2a303d]">
+                  <span class="w-2.5 h-2.5 bg-error flex items-center justify-center text-white text-[8px] font-bold">✓</span>
+                  <span class="font-bold text-error">10.12 KERNEL ACTIVE</span>
+                </div>
+              </div>
+            </div>
+          </section>
+
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Dark Footer -->
+  <footer class="w-full bg-[#0e1014] py-6 border-t border-[#222731]">
+    <div class="max-w-[1280px] mx-auto px-4 lg:px-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-4 font-code-mono text-xs text-on-surface-variant">
+      <div class="flex flex-col gap-1">
+        <div class="font-editorial-serif text-lg italic text-slate-300">“Fitter, happier, more productive, comfortable, not drinking too much...”</div>
+        <div class="uppercase font-code-mono text-[10px] text-outline">RADIOHEAD // OK COMPUTER TELEMETRY ARCHIVE // 1997-NOW</div>
+      </div>
+      <div class="flex flex-col md:items-end gap-1 font-code-mono text-xs">
+        <div class="uppercase font-bold text-white flex items-center gap-1.5">
+          <span class="w-2 h-2 rounded-full bg-error"></span>
+          <span class="">HAPPY BIRTHDAY // SYSTEM DEDICATION FOR JAEHO [10.12]</span>
+        </div>
+        <div class="text-outline text-[10px]">DATA REGISTER: 0049-JH-1012-OKC // KERNEL PANIC RESOLVED</div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
     (function () {
       const glitchBtn = document.getElementById('glitch-toggle-btn');
       const headerIndicator = document.getElementById('header-panic-indicator');
@@ -98,13 +533,11 @@
           glitchBtn.innerHTML = '<span class="material-symbols-outlined text-[14px] animate-spin">warning</span><span class="font-bold tracking-widest">[ KERNEL PANIC TRIGGERED // DUMPING MEMORY ]</span>';
         }
 
-        // Chromatic distortion flicker effect
         rootNode.classList.add('panic-active');
         if (kleinStage) {
           kleinStage.style.filter = 'contrast(200%) saturate(300%)';
         }
 
-        // Glitch audio-visual sequence
         let pulses = 0;
         const glitchInterval = setInterval(() => {
           pulses++;
@@ -138,6 +571,7 @@
       }
     })();
   </script>
-</div></main><footer class="w-full bg-[#12151a] py-space-lg border-t border-white/10"><div class="w-full px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-space-md font-code-mono text-label-sm text-label-sm text-white/60"><div class="flex flex-col gap-space-xs"><div class="font-editorial-serif text-[16px] italic text-white/90">“A heart that's full up like a landfill, a job that slowly kills you... no alarms and no surprises.”</div><div class="uppercase font-code-mono text-label-sm text-white/40">RADIOHEAD // OK COMPUTER TELEMETRY ARCHIVE // 1997-2024</div></div><div class="flex flex-col md:items-end gap-space-xs font-code-mono text-label-sm"><div class="uppercase font-bold text-white flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-error animate-pulse"></span><span class="">BIRTHDAY LOG // SYSTEM DEDICATION FOR JAEHO [10.12]</span></div><div class="text-white/40">DATA REGISTER: 0049-JH-1012-OKC // KERNEL PANIC RESOLVED</div></div></div></footer>
+
+
 
 </body></html>
