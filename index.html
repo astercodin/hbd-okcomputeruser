@@ -62,8 +62,8 @@
 <!-- Lower CRT Command Line Output -->
 <div class="bg-primary/90 p-space-xs backdrop-blur-sm text-secondary-fixed-dim font-label-sm text-label-sm flex flex-col gap-0.5">
 <div class="flex items-center justify-between text-[10px]">
-<span class="text-surface-container-lowest font-bold" id="nowPlayingCrtTag">&gt; PLAYING: [TRK_01] AIRBAG</span>
-<span class="font-mono text-secondary-fixed" id="crtTimeCode">00:00 / 04:44</span>
+<span class="text-surface-container-lowest font-bold" id="nowPlayingCrtTag">&gt; PLAYING: [TRK_11] LUCKY // JAEHO CUT</span>
+<span class="font-mono text-secondary-fixed" id="crtTimeCode">00:06 / 04:19</span>
 </div>
 <div class="text-[9px] text-outline-variant font-mono truncate">
                   $ ping host jaeho.station.local --payload "HAPPY BIRTHDAY JAEHO // OK COMPUTER"
@@ -133,13 +133,13 @@
 <!-- Active Track Display Card -->
 <div class="bg-surface-container-low p-space-md flex flex-col gap-space-xs">
 <div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
-<span class="text-secondary font-bold uppercase" id="currentTrackIndex">TRACK 01 OF 12</span>
+<span class="text-secondary font-bold uppercase" id="currentTrackIndex">TRACK 11 OF 12</span>
 <span class="font-mono uppercase text-outline" id="activeFmt">44.1kHz // 16-BIT TAPE</span>
 </div>
-<div class="text-headline-md font-headline-md font-bold text-on-surface tracking-tight truncate" id="currentTrackTitle">Airbag</div>
+<div class="text-headline-md font-headline-md font-bold text-on-surface tracking-tight truncate" id="currentTrackTitle">Lucky [Jaeho Special Cut]</div>
 <div class="font-body-sm text-body-sm text-on-surface-variant flex items-center justify-between pt-1">
-<span class="" id="currentTrackSub">Radiohead • OK Computer (1997)</span>
-<span class="px-space-xs py-0.5 bg-secondary-fixed text-on-secondary-fixed font-label-sm text-[9px] font-bold uppercase" id="badgeSpecial">ORIGINAL CUT</span>
+<span class="" id="currentTrackSub">Radiohead • OK Computer (Jaeho Special)</span>
+<span class="px-space-xs py-0.5 bg-secondary text-on-secondary font-label-sm text-[9px] font-bold uppercase animate-pulse" id="badgeSpecial" style="animation-delay: 65ms;">BIRTHDAY SPECIAL // JAEHO CUT</span>
 </div><div class="pt-0.5 flex flex-col gap-1">
 <a class="w-full py-1.5 px-space-xs bg-secondary/10 hover:bg-secondary text-secondary hover:text-on-primary flex items-center justify-between font-label-sm text-[10px] tracking-wider uppercase transition-colors border border-secondary/50 font-bold" href="https://open.spotify.com/playlist/3wbDzH414qbRST9Inkb2jH?si=889b4527d95b4ed6&amp;pt=7e1c548478ad3bc42d2857559d347ec7" rel="noopener noreferrer" target="_blank">
 <span class="flex items-center gap-0.5">
@@ -154,7 +154,7 @@
 <!-- Waveform Scrubber & Timers -->
 <div class="mt-space-sm flex flex-col gap-1">
 <div class="relative w-full h-3 bg-surface-container-highest cursor-pointer overflow-hidden" id="scrubberBar">
-<div class="h-full bg-primary transition-all duration-100" id="scrubberProgress" style="width: 0%;"></div>
+<div class="h-full bg-primary transition-all duration-100" id="scrubberProgress" style="width: 2.3166%;"></div>
 <div class="absolute inset-0 flex items-center justify-between px-1 pointer-events-none opacity-20">
 <div class="w-0.5 h-full bg-on-surface"></div>
 <div class="w-0.5 h-full bg-on-surface"></div>
@@ -163,8 +163,8 @@
 </div>
 </div>
 <div class="flex items-center justify-between font-label-sm text-label-sm font-mono text-on-surface-variant">
-<span class="" id="labelElapsed">00:00</span>
-<span class="text-outline" id="labelTotal">04:44</span>
+<span class="" id="labelElapsed">00:06</span>
+<span class="text-outline" id="labelTotal">04:19</span>
 </div>
 </div>
 </div>
@@ -175,8 +175,8 @@
 <span class="font-label-sm text-[9px] uppercase font-bold">PREV</span>
 </button>
 <button class="col-span-2 py-space-md bg-primary hover:bg-inverse-surface text-on-primary flex items-center justify-center gap-space-xs shadow-md transition-transform active:scale-95" id="playPauseBtn" type="button">
-<span class="material-symbols-outlined text-[24px]" id="playPauseIcon">play_arrow</span>
-<span class="font-label-md text-label-md uppercase font-bold tracking-wider" id="playPauseText">RESUME // PLAY</span>
+<span class="material-symbols-outlined text-[24px]" id="playPauseIcon">pause</span>
+<span class="font-label-md text-label-md uppercase font-bold tracking-wider" id="playPauseText">PAUSE // RUN</span>
 </button>
 <button class="py-space-md bg-surface-container hover:bg-surface-container-high text-on-surface flex flex-col items-center justify-center gap-1 shadow-sm transition-transform active:scale-95" id="nextBtn" type="button">
 <span class="material-symbols-outlined text-[20px]">skip_next</span>
@@ -205,9 +205,9 @@
 <!-- Interactive Track List -->
 <div class="flex flex-col gap-1.5" id="trackList">
 <!-- Track 01 -->
-<div class="track-row p-space-sm cursor-pointer flex items-center justify-between group transition-colors bg-surface-container-high shadow-sm" data-track="0">
+<div class="track-row p-space-sm cursor-pointer flex items-center justify-between group transition-colors bg-surface-container-low" data-track="0">
 <div class="flex items-center gap-space-sm min-w-0">
-<span class="font-mono font-label-sm text-label-sm text-secondary font-bold">01.</span>
+<span class="font-mono font-label-sm text-label-sm text-outline">01.</span>
 <div class="flex flex-col min-w-0">
 <span class="font-body-md text-body-md text-on-surface font-bold truncate group-hover:text-secondary">Airbag</span>
 </div>
@@ -215,7 +215,7 @@
 <div class="flex items-center gap-space-xs flex-shrink-0">
 <a class="px-1.5 py-0.5 font-label-sm text-[10px] uppercase font-mono text-secondary hover:text-on-primary bg-secondary/10 hover:bg-secondary border border-secondary/30 transition-colors font-bold inline-flex items-center gap-0.5" href="https://open.spotify.com/track/7c378mlmubSu7NGkLFa4sN?si=e04728caec2744e8" onclick="event.stopPropagation(); window.open(this.href, '_blank'); return false;" rel="noopener noreferrer" target="_blank" title="Play Airbag on Spotify">[↗ SPOTIFY]</a>
 <span class="font-mono font-label-sm text-label-sm text-on-surface-variant">04:44</span>
-<span class="material-symbols-outlined text-[16px] track-indicator text-secondary opacity-100">play_arrow</span>
+<span class="material-symbols-outlined text-[16px] track-indicator opacity-0 text-outline">play_arrow</span>
 </div>
 </div>
 <!-- Track 02 -->
@@ -345,17 +345,17 @@
 </div>
 </div>
 <!-- Track 11 -->
-<div class="track-row p-space-sm hover:bg-secondary-fixed/50 cursor-pointer flex items-center justify-between group transition-colors bg-secondary-fixed/30" data-track="10">
+<div class="track-row p-space-sm hover:bg-secondary-fixed/50 cursor-pointer flex items-center justify-between group transition-colors bg-surface-container-high shadow-sm" data-track="10">
 <div class="flex items-center gap-space-sm min-w-0">
 <span class="font-mono font-label-sm text-label-sm text-secondary font-bold">11.</span>
 <div class="flex items-center gap-1">
-<span class="font-body-md text-body-md text-on-surface font-bold truncate group-hover:text-secondary">Lucky [Jaeho Cut]</span>
+<span class="font-body-md text-body-md text-on-surface font-bold truncate group-hover:text-secondary">Lucky</span>
 </div>
 </div>
 <div class="flex items-center gap-space-xs flex-shrink-0">
 <a class="px-1.5 py-0.5 font-label-sm text-[10px] uppercase font-mono text-secondary hover:text-on-primary bg-secondary/10 hover:bg-secondary border border-secondary/30 transition-colors font-bold inline-flex items-center gap-0.5" href="https://open.spotify.com/track/14xj58ZexBaEaHARb11Cqs?si=399eae6db3d94cb6" onclick="event.stopPropagation(); window.open(this.href, '_blank'); return false;" rel="noopener noreferrer" target="_blank" title="Play Lucky on Spotify">[↗ SPOTIFY]</a>
 <span class="font-mono font-label-sm text-label-sm text-on-surface font-bold">04:19</span>
-<span class="material-symbols-outlined text-[16px] group-hover:opacity-100 track-indicator opacity-0 text-outline">play_arrow</span>
+<span class="material-symbols-outlined text-[16px] group-hover:opacity-100 track-indicator text-secondary opacity-100">volume_up</span>
 </div>
 </div>
 <!-- Track 12 -->
